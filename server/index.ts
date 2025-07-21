@@ -49,6 +49,9 @@ app.use((req, res, next) => {
 
   // Serve content files for TinaCMS
   app.use('/content', express.static("content"));
+  
+  // Serve TinaCMS admin files
+  app.use('/admin', express.static("public/admin"));
 
   // importantly only setup vite in development and after
   // setting up all the other routes so the catch-all route
@@ -59,15 +62,11 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // ALWAYS serve the app on port 5000
+  // ALWAYS serve the app on port 5001
   // this serves both the API and the client.
-  // It is the only port that is not firewalled.
-  const port = 5000;
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
+  // Port 5000 is used by macOS AirPlay, so using 5001 instead.
+  const port = 5001;
+  server.listen(port, () => {
     log(`serving on port ${port}`);
   });
 })();
