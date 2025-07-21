@@ -374,59 +374,7 @@ export default defineConfig({
           },
         ],
       },
-      {
-        name: "faq",
-        label: "FAQ",
-        path: "content/faq",
-        format: "json",
-        fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "FAQ Title",
-            required: true,
-          },
-          {
-            type: "string",
-            name: "subtitle",
-            label: "FAQ Subtitle",
-          },
-          {
-            type: "object",
-            name: "categories",
-            label: "FAQ Categories",
-            list: true,
-            fields: [
-              {
-                type: "string",
-                name: "title",
-                label: "Category Title",
-              },
-              {
-                type: "object",
-                name: "questions",
-                label: "Questions",
-                list: true,
-                fields: [
-                  {
-                    type: "string",
-                    name: "question",
-                    label: "Question",
-                  },
-                  {
-                    type: "string",
-                    name: "answer",
-                    label: "Answer",
-                    ui: {
-                      component: "textarea",
-                    },
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
+
     ],
   },
 });

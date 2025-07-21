@@ -103,6 +103,7 @@ Changelog:
     - Added making-the-film.json page content
     - Updated home.json to include FAQ component content and new About the Film section
     - Restructured TinaCMS schema to reflect actual page components and structure
+    - Removed content/faq folder since FAQ is now a component within the homepage
 - December 27, 2025. Added TinaCMS Headless CMS Integration:
   - Created comprehensive content structure with JSON files for all page content
   - Implemented TinaCMS configuration with full schema definitions for pages, FAQ, and screenings
