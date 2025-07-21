@@ -70,7 +70,7 @@ export default function Header() {
   return (
     <header className={`bg-teal-500 text-white fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'shadow-lg' : ''
-    }`}>
+    }`} style={{ willChange: 'transform' }}>
       <nav className={`container mx-auto px-6 transition-all duration-300 ${
         isScrolled ? 'py-2' : 'py-4'
       }`}>
@@ -101,12 +101,19 @@ export default function Header() {
               /* Screening Options Dropdown */
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <button className="flex items-center space-x-1 hover:text-teal-200 transition-colors duration-200">
+                  <button 
+                    className="flex items-center space-x-1 hover:text-teal-200 transition-colors duration-200"
+                    onClick={(e) => e.preventDefault()}
+                  >
                     <span>Screening Options</span>
                     <ChevronDown className="h-4 w-4" />
                   </button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-64 bg-white text-gray-700">
+                <DropdownMenuContent 
+                  className="w-64 bg-white text-gray-700 z-50"
+                  align="center"
+                  sideOffset={5}
+                >
                   {screeningTypes.map((type) => {
                     const Icon = type.icon;
                     return (
@@ -135,12 +142,17 @@ export default function Header() {
               <DropdownMenuTrigger asChild>
                 <Button
                   className="flex items-center space-x-1 bg-white text-teal-600 hover:bg-cream-100 hover:text-teal-700 transition-colors duration-200 border-0 shadow-md font-semibold"
+                  onClick={(e) => e.preventDefault()}
                 >
                   <span>Request a Screening</span>
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-64 bg-white text-gray-700">
+              <DropdownMenuContent 
+                className="w-64 bg-white text-gray-700 z-50"
+                align="center"
+                sideOffset={5}
+              >
                 {screeningTypes.map((type) => {
                   const Icon = type.icon;
                   return (
