@@ -76,11 +76,17 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
     padding-top: 80px; /* Account for fixed header */
+    scrollbar-gutter: stable; /* Reserve space for scrollbar */
   }
   
-  /* Prevent layout shift when dropdown opens */
-  .scrollbar-gutter {
-    scrollbar-gutter: stable;
+  html {
+    scrollbar-gutter: stable; /* Reserve space for scrollbar */
+  }
+  
+  /* Prevent dropdown from affecting document flow */
+  [data-radix-popper-content-wrapper] {
+    position: fixed !important;
+    z-index: 9999 !important;
   }
 }
 

@@ -68,9 +68,9 @@ export default function Header() {
   ];
 
   return (
-    <header className={`bg-teal-500 text-white fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className={`bg-teal-500 text-white fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
       isScrolled ? 'shadow-lg' : ''
-    }`}>
+    }`} style={{ right: 0 }}>
       <nav className={`container mx-auto px-6 transition-all duration-300 ${
         isScrolled ? 'py-2' : 'py-4'
       }`}>
@@ -99,18 +99,19 @@ export default function Header() {
 
             {!isScrolled && (
               /* Screening Options Dropdown */
-              <DropdownMenu>
+              <DropdownMenu modal={false}>
                 <DropdownMenuTrigger asChild>
-                  <button className="flex items-center space-x-1 hover:text-teal-200 transition-colors duration-200 whitespace-nowrap">
+                  <button className="flex items-center space-x-1 hover:text-teal-200 transition-colors duration-200 whitespace-nowrap min-w-max">
                     <span>Screening Options</span>
                     <ChevronDown className="h-4 w-4" />
                   </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent 
-                  className="w-64 bg-white text-gray-700" 
+                  className="w-64 bg-white text-gray-700 z-[9999]" 
                   align="start"
                   sideOffset={5}
-                  style={{ position: 'fixed' }}
+                  avoidCollisions={true}
+                  collisionPadding={10}
                 >
                   {screeningTypes.map((type) => {
                     const Icon = type.icon;
@@ -136,19 +137,21 @@ export default function Header() {
             )}
 
             {/* Request a Screening Button */}
-            <DropdownMenu>
+            <DropdownMenu modal={false}>
               <DropdownMenuTrigger asChild>
                 <Button
-                  className="flex items-center space-x-1 bg-white text-teal-600 hover:bg-cream-100 hover:text-teal-700 transition-colors duration-200 border-0 shadow-md font-semibold whitespace-nowrap"
+                  className="flex items-center space-x-1 bg-white text-teal-600 hover:bg-cream-100 hover:text-teal-700 transition-colors duration-200 border-0 shadow-md font-semibold whitespace-nowrap min-w-max"
                 >
                   <span>Request a Screening</span>
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent 
-                className="w-64 bg-white text-gray-700" 
+                className="w-64 bg-white text-gray-700 z-[9999]" 
                 align="end"
                 sideOffset={5}
+                avoidCollisions={true}
+                collisionPadding={10}
               >
                 {screeningTypes.map((type) => {
                   const Icon = type.icon;
