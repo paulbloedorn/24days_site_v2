@@ -47,18 +47,118 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Screenings and Speaking Engagements CTA */}
-      <section className="bg-teal-500 text-white py-16">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-display font-bold mb-6">Screenings and Speaking Engagements</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            As a case study supporting both AFE and mental-trauma awareness, screening and discussing 24 Days can help foster a culture where trauma-informed care is not just a policy, but a lived practice.
-          </p>
-          <ConsultationModal>
-            <Button className="bg-white text-teal-700 px-12 py-4 hover:bg-cream-100 transition-colors duration-200 text-lg font-semibold">
-              Schedule a Consult
-            </Button>
-          </ConsultationModal>
+      {/* About the Film Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-display font-bold mb-6">About the Film</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              "24 Days Without You" is an award-winning maternal health documentary that transforms how healthcare professionals approach birth trauma and patient care through powerful storytelling and comprehensive educational resources.
+            </p>
+          </div>
+          
+          {/* Core Value Proposition */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h3 className="text-3xl font-bold text-teal-800 mb-6">Award-Winning Documentary with Turnkey Education Packages</h3>
+              <p className="text-lg text-gray-700 mb-6">
+                As a case study supporting both AFE and mental-trauma awareness, screening and discussing "24 Days Without You" helps foster a culture where trauma-informed care is not just a policy, but a lived practice.
+              </p>
+              <p className="text-lg text-gray-700">
+                Inspire trauma-informed care and improve birth experiences across your organization with our comprehensive educational packages designed for healthcare professionals.
+              </p>
+            </div>
+            
+            <div className="bg-teal-50 p-8 rounded-lg">
+              <h4 className="text-xl font-bold text-teal-800 mb-4">Complete Educational Solution</h4>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">56-minute documentary film</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Expert-led speaking engagements with Annie and her medical team</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Comprehensive discussion guides and educational materials</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">CME credits available for medical professionals</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Flexible viewing options for institutions and classrooms</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* How Our Educational Package Works */}
+          <div className="mb-16">
+            <h3 className="text-3xl font-bold text-center mb-12 text-teal-800">How Our Educational Package Works</h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="text-center border-2 border-teal-100 hover:border-teal-300 transition-colors">
+                <CardContent className="pt-8">
+                  <div className="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-4">1</div>
+                  <h4 className="text-xl font-semibold mb-3 text-teal-800">Watch & Learn</h4>
+                  <p className="text-gray-600">
+                    Screen the 56-minute documentary with your audience. Available for individual institutional licenses or classroom streaming passes.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="text-center border-2 border-teal-100 hover:border-teal-300 transition-colors">
+                <CardContent className="pt-8">
+                  <div className="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-4">2</div>
+                  <h4 className="text-xl font-semibold mb-3 text-teal-800">Engage & Discuss</h4>
+                  <p className="text-gray-600">
+                    Add live speaking engagements with Annie (AFE survivor) and/or her medical team. Use our expertly crafted discussion guides and facilitation materials.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="text-center border-2 border-teal-100 hover:border-teal-300 transition-colors">
+                <CardContent className="pt-8">
+                  <div className="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-4">3</div>
+                  <h4 className="text-xl font-semibold mb-3 text-teal-800">Transform Practice</h4>
+                  <p className="text-gray-600">
+                    Implement trauma-informed care principles in your practice with ongoing support materials and assessment tools.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Package Options */}
+          <div className="bg-cream-100 p-8 rounded-lg">
+            <h3 className="text-2xl font-bold text-center mb-8 text-teal-800">Choose Your Package</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h4 className="text-lg font-semibold text-teal-800 mb-3">Film + Materials Package</h4>
+                <p className="text-gray-600 mb-4">Perfect for self-facilitated screenings and classroom use</p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• Documentary streaming or institutional license</li>
+                  <li>• Discussion guides and educational handouts</li>
+                  <li>• Assessment tools and reflection worksheets</li>
+                  <li>• Post-screening survey templates</li>
+                </ul>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h4 className="text-lg font-semibold text-teal-800 mb-3">Full Experience Package</h4>
+                <p className="text-gray-600 mb-4">Complete solution with live speaking engagement</p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• Everything in Film + Materials Package</li>
+                  <li>• Live virtual or in-person speaking engagement</li>
+                  <li>• Q&A session with Annie and/or medical team</li>
+                  <li>• CME credit coordination</li>
+                  <li>• Custom content for your organization</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -258,29 +358,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-display font-bold text-center mb-12">How It Works</h2>
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="space-y-4">
-              <div className="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">1</div>
-              <h3 className="text-2xl font-semibold">View</h3>
-              <p className="text-gray-600">Watch the 56-minute documentary with your audience</p>
-            </div>
-            <div className="space-y-4">
-              <div className="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">2</div>
-              <h3 className="text-2xl font-semibold">Discuss</h3>
-              <p className="text-gray-600">Use our discussion guides and facilitation materials</p>
-            </div>
-            <div className="space-y-4">
-              <div className="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">3</div>
-              <h3 className="text-2xl font-semibold">Implement</h3>
-              <p className="text-gray-600">Apply trauma-informed care principles in your practice</p>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* FAQ Section */}
       <FAQ />

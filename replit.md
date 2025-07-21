@@ -85,12 +85,19 @@ The application follows a modern full-stack architecture with:
 
 ```
 Changelog:
-- January 21, 2025. Streamlined navigation structure:
+- January 21, 2025. Streamlined navigation and enhanced homepage:
   - Removed "Behind the Scenes", "Press and Events", and "Contact Us" from main navigation
   - Created comprehensive "Making the Film" page combining producer profiles and behind-the-scenes content
   - Simplified header by removing duplicate "Screening Options" dropdown from main nav
   - Renamed "Request a Screening" button to "Screening Options" for clarity
   - Maintained sticky header functionality with single prominent screening options button
+  - Added comprehensive "About the Film" section to homepage combining:
+    - Award-winning documentary description with educational packages
+    - Speaking engagement options with Annie and medical team
+    - Package options (Film + Materials vs Full Experience)
+    - Three-step process for educational implementation
+    - Clear value proposition for healthcare organizations
+  - Replaced "Screenings and Speaking Engagements" and "How It Works" sections with unified "About the Film"
 - December 27, 2025. Added TinaCMS Headless CMS Integration:
   - Created comprehensive content structure with JSON files for all page content
   - Implemented TinaCMS configuration with full schema definitions for pages, FAQ, and screenings
