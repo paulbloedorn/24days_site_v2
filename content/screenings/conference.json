@@ -1,0 +1,33 @@
+{
+  "title": "Medical Conference Screenings",
+  "subtitle": "Professional screenings designed for healthcare providers and medical professionals",
+  "description": "Bring the powerful story of \"24 Days Without You\" to your medical conference. Our professional screening package includes expert-led discussions, CME credits, and comprehensive educational materials designed specifically for healthcare professionals.",
+  "benefits": {
+    "title": "Why Choose Our Conference Package",
+    "items": [
+      "CME credits available for participants",
+      "Expert-led post-screening discussions",
+      "Comprehensive educational materials",
+      "Networking opportunities with peers",
+      "Latest research insights on AFE",
+      "Policy improvement recommendations"
+    ]
+  },
+  "process": {
+    "title": "How It Works",
+    "steps": [
+      {
+        "title": "Initial Consultation",
+        "description": "We discuss your conference goals, audience size, and specific educational objectives to customize the screening experience."
+      },
+      {
+        "title": "Logistics Planning",
+        "description": "Our team handles all technical requirements, speaker coordination, and educational material preparation for your event."
+      },
+      {
+        "title": "Professional Screening",
+        "description": "Expert-facilitated screening with guided discussion, Q&A session, and actionable takeaways for your medical professionals."
+      }
+    ]
+  }
+}

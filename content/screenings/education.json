@@ -1,0 +1,33 @@
+{
+  "title": "Educational Institution Screenings",
+  "subtitle": "Academic screenings with curriculum integration for students",
+  "description": "Integrate \"24 Days Without You\" into your medical or nursing curriculum to provide students with real-world insights into maternal complications, patient care, and the human side of medicine. Our educational package is designed to complement academic learning objectives.",
+  "benefits": {
+    "title": "Educational Benefits",
+    "items": [
+      "Curriculum integration support",
+      "Academic credit opportunities",
+      "Student engagement and discussion",
+      "Real-world case study analysis",
+      "Enhanced empathy development",
+      "Clinical decision-making insights"
+    ]
+  },
+  "process": {
+    "title": "Academic Integration Process",
+    "steps": [
+      {
+        "title": "Curriculum Planning",
+        "description": "Work with faculty to align the screening with learning objectives, course requirements, and academic schedules."
+      },
+      {
+        "title": "Educational Resource Development",
+        "description": "Provide supplementary materials, discussion guides, and assessment tools tailored to your academic program."
+      },
+      {
+        "title": "Student Screening & Assessment",
+        "description": "Facilitate the screening with structured discussions, reflective assignments, and educational assessments for academic credit."
+      }
+    ]
+  }
+}

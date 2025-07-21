@@ -47,6 +47,9 @@ app.use((req, res, next) => {
     throw err;
   });
 
+  // Serve content files for TinaCMS
+  app.use('/content', express.static("content"));
+
   // importantly only setup vite in development and after
   // setting up all the other routes so the catch-all route
   // doesn't interfere with the other routes

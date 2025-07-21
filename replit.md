@@ -85,6 +85,14 @@ The application follows a modern full-stack architecture with:
 
 ```
 Changelog:
+- December 27, 2025. Added TinaCMS Headless CMS Integration:
+  - Created comprehensive content structure with JSON files for all page content
+  - Implemented TinaCMS configuration with full schema definitions for pages, FAQ, and screenings
+  - Organized content into logical collections: pages, faq, and screening types
+  - Set up server middleware to serve content files at /content/* endpoints
+  - Created TinaCMS client utilities and React hooks for content loading
+  - Prepared architecture for visual editing and headless CMS functionality
+  - Structured content includes hero sections, testimonials, metrics, audience cards, and FAQ items
 - July 13, 2025. Added hero section with movie poster:
   - Added new hero section with "We all take childbirth for granted..." tagline
   - Integrated movie poster image on right side

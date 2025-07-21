@@ -1,0 +1,102 @@
+{
+  "hero": {
+    "title": "We all take childbirth for granted...",
+    "description": "On March 22, 2020, Annie and Tony checked into the hospital for what should have been a routine delivery of their baby boy. What followed was 24 days that would change their lives forever.",
+    "buttonText": "Watch Trailer",
+    "posterImage": "/attached_assets/poster_24_days_1752421477308.png",
+    "posterAlt": "24 Days Without You movie poster featuring Annie and her baby"
+  },
+  "screeningsCTA": {
+    "title": "Screenings and Speaking Engagements",
+    "description": "As a case study supporting both AFE and mental-trauma awareness, screening and discussing 24 Days can help foster a culture where trauma-informed care is not just a policy, but a lived practice.",
+    "buttonText": "Schedule a Consult"
+  },
+  "testimonials": {
+    "title": "What People Are Saying",
+    "items": [
+      {
+        "type": "conference",
+        "quote": "This film opened my eyes to the importance of AFE awareness in our medical conferences. A must-see for healthcare professionals.",
+        "author": "Dr. Sarah Chen",
+        "title": "Conference Director",
+        "badge": "Conference"
+      },
+      {
+        "type": "hospital",
+        "quote": "24 Days Without You should be required viewing for all maternity staff. It's a powerful reminder of why we do what we do.",
+        "author": "Nurse Manager Lisa Rodriguez",
+        "title": "Labor & Delivery Unit",
+        "badge": "Hospital"
+      },
+      {
+        "type": "education",
+        "quote": "Our medical students were deeply moved by this documentary. It's now part of our obstetrics curriculum.",
+        "author": "Prof. Michael Thompson",
+        "title": "Medical School",
+        "badge": "Education"
+      }
+    ]
+  },
+  "metrics": {
+    "title": "Making a Real Impact",
+    "stats": [
+      {
+        "number": "6,500+",
+        "label": "Clinicians Reached"
+      },
+      {
+        "number": "97%",
+        "label": "Report Increased AFE Awareness"
+      },
+      {
+        "number": "150+",
+        "label": "Hospitals Engaged"
+      }
+    ]
+  },
+  "audienceCards": {
+    "title": "Choose Your Screening Experience",
+    "subtitle": "Tailored presentations for different audiences",
+    "cards": [
+      {
+        "type": "conference",
+        "title": "Medical Conferences",
+        "description": "Professional screenings with Q&A sessions for healthcare providers and medical professionals.",
+        "features": [
+          "Expert-led discussion",
+          "CME credits available",
+          "Networking opportunities",
+          "Research insights"
+        ],
+        "icon": "calendar",
+        "href": "/conference"
+      },
+      {
+        "type": "hospital",
+        "title": "Hospitals & Clinics",
+        "description": "Staff training sessions focused on improving patient care and awareness of complications.",
+        "features": [
+          "Staff education",
+          "Policy improvement",
+          "Patient safety focus",
+          "Implementation support"
+        ],
+        "icon": "hospital",
+        "href": "/hospital"
+      },
+      {
+        "type": "education",
+        "title": "Educational Institutions",
+        "description": "Academic screenings with curriculum integration for medical and nursing students.",
+        "features": [
+          "Curriculum integration",
+          "Student discussions",
+          "Academic credit",
+          "Learning objectives"
+        ],
+        "icon": "graduationCap",
+        "href": "/education"
+      }
+    ]
+  }
+}
