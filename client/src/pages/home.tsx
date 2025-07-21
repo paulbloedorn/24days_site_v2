@@ -53,44 +53,44 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-display font-bold mb-6">About the Film</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              "24 Days Without You" is an award-winning maternal health documentary that transforms how healthcare professionals approach birth trauma and patient care through powerful storytelling and comprehensive educational resources.
+              Address urgent healthcare priorities with an authentic patient story that improves clinical competency, reduces medical errors, and enhances trauma-informed care across your organization.
             </p>
           </div>
           
           {/* Core Value Proposition */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h3 className="text-3xl font-bold text-teal-800 mb-6">Award-Winning Documentary with Turnkey Education Packages</h3>
+              <h3 className="text-3xl font-bold text-teal-800 mb-6">Award-Winning Documentary with Complete Education Packages</h3>
               <p className="text-lg text-gray-700 mb-6">
-                As a case study supporting both AFE and mental-trauma awareness, screening and discussing "24 Days Without You" helps foster a culture where trauma-informed care is not just a policy, but a lived practice.
+                Meet continuing education requirements while addressing critical healthcare challenges. This powerful case study transforms abstract concepts into lived experiences, helping healthcare teams understand the real impact of their clinical decisions on patients and families.
               </p>
               <p className="text-lg text-gray-700">
-                Inspire trauma-informed care and improve birth experiences across your organization with our comprehensive educational packages designed for healthcare professionals.
+                Whether you need CME-accredited conference content, staff competency training, or real-world curriculum enhancement, our flexible educational packages provide the authentic patient perspective your audience needs to improve care quality and reduce medical errors.
               </p>
             </div>
             
             <div className="bg-teal-50 p-8 rounded-lg">
-              <h4 className="text-xl font-bold text-teal-800 mb-4">Complete Educational Solution</h4>
+              <h4 className="text-xl font-bold text-teal-800 mb-4">Flexible Solutions for Every Educational Need</h4>
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">56-minute documentary film</span>
+                  <span className="text-gray-700">56-minute documentary with institutional licensing or classroom streaming</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Expert-led speaking engagements with Annie and her medical team</span>
+                  <span className="text-gray-700">Live or virtual speaking engagements with AFE survivor and medical experts</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Comprehensive discussion guides and educational materials</span>
+                  <span className="text-gray-700">Discussion guides mapped to educational standards and competencies</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">CME credits available for medical professionals</span>
+                  <span className="text-gray-700">CME accreditation support and continuing education credits</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Flexible viewing options for institutions and classrooms</span>
+                  <span className="text-gray-700">Assessment tools and reflection exercises for deeper learning</span>
                 </div>
               </div>
             </div>
@@ -224,10 +224,10 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-display font-bold leading-tight mb-6">
-              Award-winning maternal-health documentary with turnkey education packages
+              Tailored Solutions for Healthcare Education Leaders
             </h2>
             <p className="text-xl lg:text-2xl opacity-90 max-w-4xl mx-auto">
-              Inspire trauma-informed care and improve birth experiences across your organisation
+              Meet your specific educational goals with flexible packages designed for continuing education, staff competency, and curriculum enhancement
             </p>
           </div>
 
@@ -242,21 +242,22 @@ export default function Home() {
                     <Calendar className="h-8 w-8 text-teal-600" />
                   </div>
                   <h3 className="text-2xl font-display font-bold text-teal-800 mb-2">
-                    Conference Planners: Boost CME Engagement
+                    Medical Conference Planners
                   </h3>
+                  <p className="text-sm text-gray-600 mb-4">Meet continuing education requirements with compelling content</p>
                 </div>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Earn CME credits with patient-story session meeting ACCME standards</span>
+                    <span className="text-sm">ACCME-compliant content addressing current healthcare challenges</span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Proven 30-minute post-film panel keeps audiences engaged</span>
+                    <span className="text-sm">Expert panels with real patient perspective boost engagement</span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Turnkey licensing, A/V specs, and marketing assets ready</span>
+                    <span className="text-sm">Complete logistics support: licensing, A/V, and promotional materials</span>
                   </div>
                 </div>
                 <ConsultationModal defaultRole="conference">
@@ -275,21 +276,22 @@ export default function Home() {
                     <Stethoscope className="h-8 w-8 text-teal-600" />
                   </div>
                   <h3 className="text-2xl font-display font-bold text-teal-800 mb-2">
-                    Hospital Nurse Educators: Trauma-Informed Care
+                    Hospital Nurse Educators
                   </h3>
+                  <p className="text-sm text-gray-600 mb-4">Improve patient outcomes through staff competency training</p>
                 </div>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Module aligned to AACN & AWHONN competencies</span>
+                    <span className="text-sm">Evidence-based training aligned to AACN & AWHONN competencies</span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Includes reflection worksheets and competency checklists</span>
+                    <span className="text-sm">Reduces medical errors through trauma-informed care principles</span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Flexible: grand-rounds, unit in-service, or micro-learning clips</span>
+                    <span className="text-sm">Flexible delivery: grand rounds, unit training, or self-paced modules</span>
                   </div>
                 </div>
                 <ConsultationModal defaultRole="hospital">
@@ -308,21 +310,22 @@ export default function Home() {
                     <GraduationCap className="h-8 w-8 text-teal-600" />
                   </div>
                   <h3 className="text-2xl font-display font-bold text-teal-800 mb-2">
-                    Medical School Professors: Case-Based Learning
+                    Medical School Professors
                   </h3>
+                  <p className="text-sm text-gray-600 mb-4">Enhance curriculum with real-world case studies</p>
                 </div>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Discussion guide mapped to AAMC Entrustable Professional Activities</span>
+                    <span className="text-sm">Case studies mapped to AAMC competencies and learning objectives</span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Supports OB-GYN, psychiatry, ethics, and health-systems courses</span>
+                    <span className="text-sm">Cross-curricular applications: OB-GYN, psychiatry, ethics, health systems</span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Assessment bank (MCQs & prompts) in LMS-ready format</span>
+                    <span className="text-sm">LMS-ready assessments and authentic patient perspectives</span>
                   </div>
                 </div>
                 <ConsultationModal defaultRole="education">
