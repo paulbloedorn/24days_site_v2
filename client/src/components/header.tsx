@@ -101,12 +101,17 @@ export default function Header() {
               /* Screening Options Dropdown */
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <button className="flex items-center space-x-1 hover:text-teal-200 transition-colors duration-200">
+                  <button className="flex items-center space-x-1 hover:text-teal-200 transition-colors duration-200 whitespace-nowrap">
                     <span>Screening Options</span>
                     <ChevronDown className="h-4 w-4" />
                   </button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-64 bg-white text-gray-700">
+                <DropdownMenuContent 
+                  className="w-64 bg-white text-gray-700" 
+                  align="start"
+                  sideOffset={5}
+                  style={{ position: 'fixed' }}
+                >
                   {screeningTypes.map((type) => {
                     const Icon = type.icon;
                     return (
@@ -134,13 +139,17 @@ export default function Header() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
-                  className="flex items-center space-x-1 bg-white text-teal-600 hover:bg-cream-100 hover:text-teal-700 transition-colors duration-200 border-0 shadow-md font-semibold"
+                  className="flex items-center space-x-1 bg-white text-teal-600 hover:bg-cream-100 hover:text-teal-700 transition-colors duration-200 border-0 shadow-md font-semibold whitespace-nowrap"
                 >
                   <span>Request a Screening</span>
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-64 bg-white text-gray-700">
+              <DropdownMenuContent 
+                className="w-64 bg-white text-gray-700" 
+                align="end"
+                sideOffset={5}
+              >
                 {screeningTypes.map((type) => {
                   const Icon = type.icon;
                   return (

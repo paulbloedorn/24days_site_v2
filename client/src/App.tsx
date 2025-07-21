@@ -29,7 +29,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TinaProvider>
         <TooltipProvider>
-          <div className="font-body bg-cream-100 text-gray-800">
+          <div className="font-body bg-cream-100 text-gray-800 scrollbar-gutter">
             <Toaster />
             <Router />
           </div>
