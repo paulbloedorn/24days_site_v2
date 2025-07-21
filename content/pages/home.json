@@ -6,34 +6,121 @@
     "posterImage": "/attached_assets/poster_24_days_1752421477308.png",
     "posterAlt": "24 Days Without You movie poster featuring Annie and her baby"
   },
-  "screeningsCTA": {
-    "title": "Screenings and Speaking Engagements",
-    "description": "As a case study supporting both AFE and mental-trauma awareness, screening and discussing 24 Days can help foster a culture where trauma-informed care is not just a policy, but a lived practice.",
-    "buttonText": "Schedule a Consult"
+  "aboutTheFilm": {
+    "title": "About the Film",
+    "description": "Address urgent healthcare priorities with an authentic patient story that improves clinical competency, reduces medical errors, and enhances trauma-informed care across your organization.",
+    "mainContent": {
+      "title": "Award-Winning Documentary with Complete Education Packages",
+      "description1": "Meet continuing education requirements while addressing critical healthcare challenges. This powerful case study transforms abstract concepts into lived experiences, helping healthcare teams understand the real impact of their clinical decisions on patients and families.",
+      "description2": "Whether you need CME-accredited conference content, staff competency training, or real-world curriculum enhancement, our flexible educational packages provide the authentic patient perspective your audience needs to improve care quality and reduce medical errors."
+    },
+    "features": {
+      "title": "Flexible Solutions for Every Educational Need",
+      "items": [
+        "56-minute documentary with institutional licensing or classroom streaming",
+        "Live or virtual speaking engagements with AFE survivor and medical experts",
+        "Discussion guides mapped to educational standards and competencies",
+        "CME accreditation support and continuing education credits",
+        "Assessment tools and reflection exercises for deeper learning"
+      ]
+    },
+    "howItWorks": {
+      "title": "How Our Educational Package Works",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Watch & Learn",
+          "description": "Screen the 56-minute documentary with your audience. Available for individual institutional licenses or classroom streaming passes."
+        },
+        {
+          "step": 2,
+          "title": "Engage & Discuss",
+          "description": "Add live speaking engagements with Annie (AFE survivor) and/or her medical team. Use our expertly crafted discussion guides and facilitation materials."
+        },
+        {
+          "step": 3,
+          "title": "Transform Practice",
+          "description": "Implement trauma-informed care principles in your practice with ongoing support materials and assessment tools."
+        }
+      ]
+    },
+    "packages": [
+      {
+        "title": "Film + Materials Package",
+        "description": "Perfect for self-facilitated screenings and classroom use",
+        "features": [
+          "Documentary streaming or institutional license",
+          "Discussion guides and educational handouts",
+          "Assessment tools and reflection worksheets",
+          "Post-screening survey templates"
+        ]
+      },
+      {
+        "title": "Full Experience Package",
+        "description": "Complete solution with live speaking engagement",
+        "features": [
+          "Everything in Film + Materials Package",
+          "Live virtual or in-person speaking engagement",
+          "Q&A session with Annie and/or medical team",
+          "CME credit coordination",
+          "Custom content for your organization"
+        ]
+      }
+    ]
   },
   "testimonials": {
     "title": "What People Are Saying",
     "items": [
       {
-        "type": "conference",
-        "quote": "This film opened my eyes to the importance of AFE awareness in our medical conferences. A must-see for healthcare professionals.",
-        "author": "Dr. Sarah Chen",
-        "title": "Conference Director",
+        "quote": "Raw, powerful, and deeply moving. This film doesn't just tell a story—it invites you to feel every moment and leaves you thinking long after the credits roll.",
+        "author": "Denise Amundson, RN Labor and Delivery",
         "badge": "Conference"
       },
       {
-        "type": "hospital",
-        "quote": "24 Days Without You should be required viewing for all maternity staff. It's a powerful reminder of why we do what we do.",
-        "author": "Nurse Manager Lisa Rodriguez",
-        "title": "Labor & Delivery Unit",
+        "quote": "I'm a better nurse for having the opportunity to see their story. This film should be essential viewing for all healthcare professionals.",
+        "author": "Julie O'Hara, RN, Neonatology",
         "badge": "Hospital"
       },
       {
-        "type": "education",
-        "quote": "Our medical students were deeply moved by this documentary. It's now part of our obstetrics curriculum.",
-        "author": "Prof. Michael Thompson",
-        "title": "Medical School",
+        "quote": "This film should be essential viewing for all healthcare professionals who are involved in obstetric care.",
+        "author": "Catherine Hermann, MD",
         "badge": "Education"
+      }
+    ]
+  },
+  "audienceCards": {
+    "title": "Tailored Solutions for Healthcare Education Leaders",
+    "subtitle": "Meet your specific educational goals with flexible packages designed for continuing education, staff competency, and curriculum enhancement",
+    "cards": [
+      {
+        "title": "Medical Conference Planners",
+        "subtitle": "Meet continuing education requirements with compelling content",
+        "icon": "Calendar",
+        "benefits": [
+          "ACCME-compliant content addressing current healthcare challenges",
+          "Expert panels with real patient perspective boost engagement",
+          "Complete logistics support: licensing, A/V, and promotional materials"
+        ]
+      },
+      {
+        "title": "Hospital Nurse Educators",
+        "subtitle": "Improve patient outcomes through staff competency training",
+        "icon": "Stethoscope",
+        "benefits": [
+          "Evidence-based training aligned to AACN & AWHONN competencies",
+          "Reduces medical errors through trauma-informed care principles",
+          "Flexible delivery: grand rounds, unit training, or self-paced modules"
+        ]
+      },
+      {
+        "title": "Medical School Professors",
+        "subtitle": "Enhance curriculum with real-world case studies",
+        "icon": "GraduationCap",
+        "benefits": [
+          "Case studies mapped to AAMC competencies and learning objectives",
+          "Cross-curricular applications: OB-GYN, psychiatry, ethics, health systems",
+          "LMS-ready assessments and authentic patient perspectives"
+        ]
       }
     ]
   },
@@ -42,60 +129,48 @@
     "stats": [
       {
         "number": "6,500+",
-        "label": "Clinicians Reached"
+        "label": "clinicians trained",
+        "icon": "Users"
       },
       {
         "number": "97%",
-        "label": "Report Increased AFE Awareness"
-      },
-      {
-        "number": "150+",
-        "label": "Hospitals Engaged"
+        "label": "said session will change practice",
+        "icon": "Star"
       }
     ]
   },
-  "audienceCards": {
-    "title": "Choose Your Screening Experience",
-    "subtitle": "Tailored presentations for different audiences",
-    "cards": [
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "sections": [
       {
-        "type": "conference",
-        "title": "Medical Conferences",
-        "description": "Professional screenings with Q&A sessions for healthcare providers and medical professionals.",
-        "features": [
-          "Expert-led discussion",
-          "CME credits available",
-          "Networking opportunities",
-          "Research insights"
-        ],
-        "icon": "calendar",
-        "href": "/conference"
+        "title": "Screening Logistics",
+        "questions": [
+          {
+            "question": "How far in advance should we book a screening?",
+            "answer": "We recommend booking at least 4-6 weeks in advance to ensure availability and allow time for proper promotion and logistics planning."
+          },
+          {
+            "question": "Is there a cost for screenings?",
+            "answer": "Screening costs vary based on audience size, venue type, and additional services requested. Contact us for a customized quote based on your specific needs."
+          }
+        ]
       },
       {
-        "type": "hospital",
-        "title": "Hospitals & Clinics",
-        "description": "Staff training sessions focused on improving patient care and awareness of complications.",
-        "features": [
-          "Staff education",
-          "Policy improvement",
-          "Patient safety focus",
-          "Implementation support"
-        ],
-        "icon": "hospital",
-        "href": "/hospital"
-      },
-      {
-        "type": "education",
-        "title": "Educational Institutions",
-        "description": "Academic screenings with curriculum integration for medical and nursing students.",
-        "features": [
-          "Curriculum integration",
-          "Student discussions",
-          "Academic credit",
-          "Learning objectives"
-        ],
-        "icon": "graduationCap",
-        "href": "/education"
+        "title": "Educational Impact",
+        "questions": [
+          {
+            "question": "What learning outcomes can we expect?",
+            "answer": "Audiences gain increased awareness of AFE, improved understanding of maternal complications, enhanced empathy for patient experiences, and actionable insights for healthcare improvement."
+          },
+          {
+            "question": "Are CME credits available?",
+            "answer": "Yes, we can arrange for Continuing Medical Education (CME) credits for qualified healthcare professional screenings. Contact us to discuss accreditation options."
+          },
+          {
+            "question": "What support materials are provided?",
+            "answer": "We provide discussion guides, educational handouts, speaker notes, and post-screening survey templates to maximize the educational impact of your event."
+          }
+        ]
       }
     ]
   }

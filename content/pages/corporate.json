@@ -1,7 +1,11 @@
 {
   "title": "Corporate Screenings",
   "subtitle": "Employee wellness programs and corporate training sessions",
-  "description": "Bring awareness of maternal health challenges to your corporate environment through professional screenings of \"24 Days Without You\". Our corporate package is designed to enhance employee wellness programs, diversity and inclusion initiatives, and workplace empathy training.",
+  "hero": {
+    "title": "Corporate Screenings",
+    "description": "Bring awareness of maternal health challenges to your corporate environment through professional screenings of \"24 Days Without You\". Our corporate package is designed to enhance employee wellness programs, diversity and inclusion initiatives, and workplace empathy training.",
+    "icon": "Building"
+  },
   "benefits": {
     "title": "Corporate Benefits",
     "items": [
@@ -29,5 +33,9 @@
         "description": "Host the screening with facilitated discussions about healthcare awareness, family support, and workplace wellness."
       }
     ]
+  },
+  "highlight": {
+    "title": "Morgan Stanley Event",
+    "description": "24 Days Without You was hosted by one of Morgan Stanley's women's wellness groups in honor of Maternal Mental Health Awareness Day. They rented a theater and provided snacks and beverages. Conversation with Annie and Rebecca followed the film."
   }
 }

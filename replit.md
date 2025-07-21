@@ -98,6 +98,11 @@ Changelog:
     - Three-step process for educational implementation
     - Clear value proposition for healthcare organizations
   - Replaced "Screenings and Speaking Engagements" and "How It Works" sections with unified "About the Film"
+  - Updated TinaCMS content structure to match current website architecture:
+    - Moved screening content from /screenings/ to individual page files
+    - Added making-the-film.json page content
+    - Updated home.json to include FAQ component content and new About the Film section
+    - Restructured TinaCMS schema to reflect actual page components and structure
 - December 27, 2025. Added TinaCMS Headless CMS Integration:
   - Created comprehensive content structure with JSON files for all page content
   - Implemented TinaCMS configuration with full schema definitions for pages, FAQ, and screenings

@@ -80,8 +80,8 @@ export default defineConfig({
           },
           {
             type: "object",
-            name: "screeningsCTA",
-            label: "Screenings CTA Section",
+            name: "aboutTheFilm",
+            label: "About the Film Section",
             fields: [
               {
                 type: "string",
@@ -98,9 +98,112 @@ export default defineConfig({
                 },
               },
               {
-                type: "string",
-                name: "buttonText",
-                label: "Button Text",
+                type: "object",
+                name: "mainContent",
+                label: "Main Content",
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Content Title",
+                  },
+                  {
+                    type: "string",
+                    name: "description1",
+                    label: "First Description",
+                    ui: {
+                      component: "textarea",
+                    },
+                  },
+                  {
+                    type: "string",
+                    name: "description2",
+                    label: "Second Description",
+                    ui: {
+                      component: "textarea",
+                    },
+                  },
+                ],
+              },
+              {
+                type: "object",
+                name: "features",
+                label: "Features",
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Features Title",
+                  },
+                  {
+                    type: "string",
+                    name: "items",
+                    label: "Feature Items",
+                    list: true,
+                  },
+                ],
+              },
+              {
+                type: "object",
+                name: "howItWorks",
+                label: "How It Works",
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Section Title",
+                  },
+                  {
+                    type: "object",
+                    name: "steps",
+                    label: "Steps",
+                    list: true,
+                    fields: [
+                      {
+                        type: "number",
+                        name: "step",
+                        label: "Step Number",
+                      },
+                      {
+                        type: "string",
+                        name: "title",
+                        label: "Step Title",
+                      },
+                      {
+                        type: "string",
+                        name: "description",
+                        label: "Step Description",
+                        ui: {
+                          component: "textarea",
+                        },
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: "object",
+                name: "packages",
+                label: "Package Options",
+                list: true,
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Package Title",
+                  },
+                  {
+                    type: "string",
+                    name: "description",
+                    label: "Package Description",
+                  },
+                  {
+                    type: "string",
+                    name: "features",
+                    label: "Package Features",
+                    list: true,
+                  },
+                ],
               },
             ],
           },
@@ -122,12 +225,6 @@ export default defineConfig({
                 fields: [
                   {
                     type: "string",
-                    name: "type",
-                    label: "Type",
-                    options: ["conference", "hospital", "education"],
-                  },
-                  {
-                    type: "string",
                     name: "quote",
                     label: "Quote",
                     ui: {
@@ -138,11 +235,6 @@ export default defineConfig({
                     type: "string",
                     name: "author",
                     label: "Author",
-                  },
-                  {
-                    type: "string",
-                    name: "title",
-                    label: "Author Title",
                   },
                   {
                     type: "string",
@@ -179,6 +271,11 @@ export default defineConfig({
                     name: "label",
                     label: "Label",
                   },
+                  {
+                    type: "string",
+                    name: "icon",
+                    label: "Icon",
+                  },
                 ],
               },
             ],
@@ -206,27 +303,13 @@ export default defineConfig({
                 fields: [
                   {
                     type: "string",
-                    name: "type",
-                    label: "Type",
-                  },
-                  {
-                    type: "string",
                     name: "title",
                     label: "Card Title",
                   },
                   {
                     type: "string",
-                    name: "description",
-                    label: "Description",
-                    ui: {
-                      component: "textarea",
-                    },
-                  },
-                  {
-                    type: "string",
-                    name: "features",
-                    label: "Features",
-                    list: true,
+                    name: "subtitle",
+                    label: "Card Subtitle",
                   },
                   {
                     type: "string",
@@ -235,8 +318,55 @@ export default defineConfig({
                   },
                   {
                     type: "string",
-                    name: "href",
-                    label: "Link",
+                    name: "benefits",
+                    label: "Benefits",
+                    list: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "faq",
+            label: "FAQ Section",
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Section Title",
+              },
+              {
+                type: "object",
+                name: "sections",
+                label: "FAQ Sections",
+                list: true,
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Section Title",
+                  },
+                  {
+                    type: "object",
+                    name: "questions",
+                    label: "Questions",
+                    list: true,
+                    fields: [
+                      {
+                        type: "string",
+                        name: "question",
+                        label: "Question",
+                      },
+                      {
+                        type: "string",
+                        name: "answer",
+                        label: "Answer",
+                        ui: {
+                          component: "textarea",
+                        },
+                      },
+                    ],
                   },
                 ],
               },
@@ -290,81 +420,6 @@ export default defineConfig({
                     ui: {
                       component: "textarea",
                     },
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        name: "screening",
-        label: "Screening Types",
-        path: "content/screenings",
-        format: "json",
-        fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Page Title",
-            required: true,
-          },
-          {
-            type: "string",
-            name: "subtitle",
-            label: "Page Subtitle",
-          },
-          {
-            type: "string",
-            name: "description",
-            label: "Description",
-            ui: {
-              component: "textarea",
-            },
-          },
-          {
-            type: "object",
-            name: "benefits",
-            label: "Benefits",
-            fields: [
-              {
-                type: "string",
-                name: "title",
-                label: "Benefits Title",
-              },
-              {
-                type: "string",
-                name: "items",
-                label: "Benefit Items",
-                list: true,
-              },
-            ],
-          },
-          {
-            type: "object",
-            name: "process",
-            label: "How It Works",
-            fields: [
-              {
-                type: "string",
-                name: "title",
-                label: "Process Title",
-              },
-              {
-                type: "object",
-                name: "steps",
-                label: "Steps",
-                list: true,
-                fields: [
-                  {
-                    type: "string",
-                    name: "title",
-                    label: "Step Title",
-                  },
-                  {
-                    type: "string",
-                    name: "description",
-                    label: "Step Description",
                   },
                 ],
               },

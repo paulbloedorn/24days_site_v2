@@ -1,7 +1,11 @@
 {
   "title": "Hospital & Clinic Screenings",
   "subtitle": "Staff training sessions focused on improving patient care and awareness",
-  "description": "Transform your healthcare team's understanding of maternal complications with our comprehensive hospital screening program. Designed specifically for medical staff, our sessions focus on patient safety, policy improvement, and trauma-informed care practices.",
+  "hero": {
+    "title": "Hospital & Clinic Screenings",
+    "description": "Transform your healthcare team's understanding of maternal complications with our comprehensive hospital screening program. Designed specifically for medical staff, our sessions focus on patient safety, policy improvement, and trauma-informed care practices.",
+    "icon": "Stethoscope"
+  },
   "benefits": {
     "title": "Benefits for Your Healthcare Team",
     "items": [
@@ -29,5 +33,9 @@
         "description": "Conduct the screening session with follow-up discussions, practical workshops, and ongoing support for implementation."
       }
     ]
+  },
+  "highlight": {
+    "title": "Angela's Event Highlight",
+    "description": "24 Days Without You was shown to all L&D staff in one of the hospital campus classrooms one evening in June. The event was sponsored by an OBGYN group working at the hospital and featured snacks, drinks, and discussion after the film screening."
   }
 }
