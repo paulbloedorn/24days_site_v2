@@ -97,7 +97,40 @@ export default function Header() {
               </a>
             ))}
 
-            {/* Screening Dropdown */}
+            {!isScrolled && (
+              /* Screening Options Dropdown */
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className="flex items-center space-x-1 hover:text-teal-200 transition-colors duration-200">
+                    <span>Screening Options</span>
+                    <ChevronDown className="h-4 w-4" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-64 bg-white text-gray-700">
+                  {screeningTypes.map((type) => {
+                    const Icon = type.icon;
+                    return (
+                      <DropdownMenuItem key={type.name} asChild>
+                        <Link
+                          href={type.href}
+                          className="flex items-center px-4 py-3 hover:bg-teal-50 hover:text-teal-700 transition-colors duration-200"
+                        >
+                          <Icon className="h-5 w-5 mr-3 text-teal-500" />
+                          <div>
+                            <div className="font-medium">{type.name}</div>
+                            <div className="text-xs text-gray-500 mt-1">
+                              {type.description}
+                            </div>
+                          </div>
+                        </Link>
+                      </DropdownMenuItem>
+                    );
+                  })}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            )}
+
+            {/* Request a Screening Button */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
@@ -160,7 +193,26 @@ export default function Header() {
                   {item.name}
                 </a>
               ))}
-              <div className={`${!isScrolled ? 'border-t border-teal-400 pt-2 mt-2' : ''}`}>
+              
+              {!isScrolled && (
+                <div className="border-t border-teal-400 pt-2 mt-2">
+                  <div className="bg-white text-teal-600 rounded-md p-2 mb-2 shadow-md">
+                    <div className="text-sm font-semibold mb-2">Screening Options:</div>
+                    {screeningTypes.map((type) => (
+                      <Link
+                        key={type.name}
+                        href={type.href}
+                        className="block py-2 pl-2 hover:text-teal-700 hover:bg-cream-100 rounded transition-colors duration-200"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {type.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div className={`${!isScrolled ? '' : 'mt-2'}`}>
                 <div className="bg-white text-teal-600 rounded-md p-2 mb-2 shadow-md">
                   <div className="text-sm font-semibold mb-2">Request a Screening:</div>
                   {screeningTypes.map((type) => (
