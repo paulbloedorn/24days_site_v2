@@ -94,44 +94,7 @@ export default function Header() {
               </a>
             ))}
 
-            {!isScrolled && (
-              /* Screening Options Dropdown */
-              <DropdownMenu modal={false}>
-                <DropdownMenuTrigger asChild>
-                  <button className="flex items-center space-x-1 hover:text-teal-200 transition-colors duration-200 whitespace-nowrap min-w-max">
-                    <span>Screening Options</span>
-                    <ChevronDown className="h-4 w-4" />
-                  </button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent 
-                  className="w-64 bg-white text-gray-700 z-[9999]" 
-                  align="start"
-                  sideOffset={5}
-                  avoidCollisions={true}
-                  collisionPadding={10}
-                >
-                  {screeningTypes.map((type) => {
-                    const Icon = type.icon;
-                    return (
-                      <DropdownMenuItem key={type.name} asChild>
-                        <Link
-                          href={type.href}
-                          className="flex items-center px-4 py-3 hover:bg-teal-50 hover:text-teal-700 transition-colors duration-200"
-                        >
-                          <Icon className="h-5 w-5 mr-3 text-teal-500" />
-                          <div>
-                            <div className="font-medium">{type.name}</div>
-                            <div className="text-xs text-gray-500 mt-1">
-                              {type.description}
-                            </div>
-                          </div>
-                        </Link>
-                      </DropdownMenuItem>
-                    );
-                  })}
-                </DropdownMenuContent>
-              </DropdownMenu>
-            )}
+
 
             {/* Request a Screening Button */}
             <DropdownMenu modal={false}>
@@ -139,7 +102,7 @@ export default function Header() {
                 <Button
                   className="flex items-center space-x-1 bg-white text-teal-600 hover:bg-cream-100 hover:text-teal-700 transition-colors duration-200 border-0 shadow-md font-semibold whitespace-nowrap min-w-max"
                 >
-                  <span>Request a Screening</span>
+                  <span>Screening Options</span>
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>

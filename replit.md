@@ -85,6 +85,12 @@ The application follows a modern full-stack architecture with:
 
 ```
 Changelog:
+- January 21, 2025. Streamlined navigation structure:
+  - Removed "Behind the Scenes", "Press and Events", and "Contact Us" from main navigation
+  - Created comprehensive "Making the Film" page combining producer profiles and behind-the-scenes content
+  - Simplified header by removing duplicate "Screening Options" dropdown from main nav
+  - Renamed "Request a Screening" button to "Screening Options" for clarity
+  - Maintained sticky header functionality with single prominent screening options button
 - December 27, 2025. Added TinaCMS Headless CMS Integration:
   - Created comprehensive content structure with JSON files for all page content
   - Implemented TinaCMS configuration with full schema definitions for pages, FAQ, and screenings
