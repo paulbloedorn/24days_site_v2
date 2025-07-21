@@ -9,6 +9,7 @@ import Conference from "@/pages/conference";
 import Hospital from "@/pages/hospital";
 import Education from "@/pages/education";
 import Corporate from "@/pages/corporate";
+import MakingTheFilm from "@/pages/making-the-film";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -19,6 +20,7 @@ function Router() {
       <Route path="/hospital" component={Hospital} />
       <Route path="/education" component={Education} />
       <Route path="/corporate" component={Corporate} />
+      <Route path="/making-the-film" component={MakingTheFilm} />
       <Route component={NotFound} />
     </Switch>
   );

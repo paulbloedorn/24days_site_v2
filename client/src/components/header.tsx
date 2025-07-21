@@ -34,10 +34,7 @@ export default function Header() {
   }, [lastScrollY]);
 
   const navigation = [
-    { name: "Our Producers", href: "#producers" },
-    { name: "Behind the Scenes", href: "#behind-scenes" },
-    { name: "Press & Events", href: "#press" },
-    { name: "Contact Us", href: "#contact" },
+    { name: "Making the Film", href: "/making-the-film" },
   ];
 
   const screeningTypes = [
