@@ -21,71 +21,16 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "attached_assets",
+      mediaRoot: "",
       publicFolder: "public",
     },
   },
-  
+  // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
     collections: [
       {
-        name: "pages",
-        label: "Pages",
-        path: "content/pages",
-        format: "json",
-        ui: {
-          router: ({ document }) => {
-            if (document._sys.filename === "home") return "/";
-            return `/${document._sys.filename}`;
-          },
-        },
-        templates: [
-          {
-            name: "home",
-            label: "Home Page",
-            fields: [
-              {
-                type: "object",
-                name: "hero",
-                label: "Hero Section",
-                fields: [
-                  {
-                    type: "string",
-                    name: "title",
-                    label: "Title",
-                  },
-                  {
-                    type: "string",
-                    name: "description",
-                    label: "Description",
-                    ui: {
-                      component: "textarea",
-                    },
-                  },
-                  {
-                    type: "string",
-                    name: "buttonText",
-                    label: "Button Text",
-                  },
-                  {
-                    type: "image",
-                    name: "posterImage",
-                    label: "Poster Image",
-                  },
-                  {
-                    type: "string",
-                    name: "posterAlt",
-                    label: "Poster Alt Text",
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
         name: "post",
-        label: "Blog Posts",
+        label: "Posts",
         path: "content/posts",
         fields: [
           {
@@ -103,7 +48,8 @@ export default defineConfig({
           },
         ],
         ui: {
-          router: ({ document }) => `/blog/${document._sys.filename}`,
+          // This is an DEMO router. You can remove this to fit your site
+          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
         },
       },
     ],
