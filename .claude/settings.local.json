@@ -20,7 +20,8 @@
       "Bash(node:*)",
       "Bash(npm:*)",
       "Bash(npx next:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(npx tinacms build:*)"
     ],
     "deny": []
   }

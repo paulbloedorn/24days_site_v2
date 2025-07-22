@@ -8,8 +8,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import posterImage from "@assets/poster_24_days_1752421477308.png";
+import { client } from "../tina/__generated__/client";
 
-export default function Home() {
+export default async function Home() {
+  const result = await client.queries.pages({
+    relativePath: "home.json",
+  });
+  const data = result.data.pages;
   return (
     <div className="min-h-screen">
       <Header />
@@ -20,10 +25,10 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <h1 className="text-4xl lg:text-5xl font-display font-bold leading-tight text-gray-800">
-                We all take childbirth for granted...
+                {data.hero?.title || "We all take childbirth for granted..."}
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                On March 22, 2020, Annie and Tony checked into the hospital for what should have been a routine delivery of their baby boy. What followed was 24 days that would change their lives forever.
+                {data.hero?.description || "On March 22, 2020, Annie and Tony checked into the hospital for what should have been a routine delivery of their baby boy. What followed was 24 days that would change their lives forever."}
               </p>
               <div className="pt-4">
                 <TrailerModal>
@@ -51,84 +56,83 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-display font-bold mb-6">About the Film</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Address urgent healthcare priorities with an authentic patient story that improves clinical competency, reduces medical errors, and enhances trauma-informed care across your organization.
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-gray-800 mb-4">
+              {data.aboutTheFilm?.title || "About the Film"}
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              {data.aboutTheFilm?.description || "Address urgent healthcare priorities with an authentic patient story that improves clinical competency, reduces medical errors, and enhances trauma-informed care across your organization."}
             </p>
           </div>
-          
-          {/* Core Value Proposition */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <h3 className="text-3xl font-bold text-teal-800 mb-6">Award-Winning Documentary with Complete Education Packages</h3>
-              <p className="text-lg text-gray-700 mb-6">
-                Meet continuing education requirements while addressing critical healthcare challenges. This powerful case study transforms abstract concepts into lived experiences, helping healthcare teams understand the real impact of their clinical decisions on patients and families.
-              </p>
-              <p className="text-lg text-gray-700">
-                Whether you need CME-accredited conference content, staff competency training, or real-world curriculum enhancement, our flexible educational packages provide the authentic patient perspective your audience needs to improve care quality and reduce medical errors.
-              </p>
-            </div>
-            
-            <div className="bg-teal-50 p-8 rounded-lg">
-              <h4 className="text-xl font-bold text-teal-800 mb-4">Flexible Solutions for Every Educational Need</h4>
-              <div className="space-y-3">
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">56-minute documentary with institutional licensing or classroom streaming</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Live or virtual speaking engagements with AFE survivor and medical experts</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Discussion guides mapped to educational standards and competencies</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">CME accreditation support and continuing education credits</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Assessment tools and reflection exercises for deeper learning</span>
-                </div>
-              </div>
+
+          {/* Main Content */}
+          <div className="bg-cream-50 p-8 rounded-lg mb-12">
+            <h3 className="text-2xl font-bold text-teal-800 mb-4">
+              {data.aboutTheFilm?.mainContent?.title || "Award-Winning Documentary with Complete Education Packages"}
+            </h3>
+            <p className="text-gray-700 mb-4">
+              {data.aboutTheFilm?.mainContent?.description1 || "Meet continuing education requirements while addressing critical healthcare challenges. This powerful case study transforms abstract concepts into lived experiences, helping healthcare teams understand the real impact of their clinical decisions on patients and families."}
+            </p>
+            <p className="text-gray-700">
+              {data.aboutTheFilm?.mainContent?.description2 || "Whether you need CME-accredited conference content, staff competency training, or real-world curriculum enhancement, our flexible educational packages provide the authentic patient perspective your audience needs to improve care quality and reduce medical errors."}
+            </p>
+          </div>
+
+          {/* Features */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-center mb-8 text-teal-800">
+              {data.aboutTheFilm?.features?.title || "Flexible Solutions for Every Educational Need"}
+            </h3>
+            <div className="bg-white border border-gray-200 rounded-lg p-8">
+              <ul className="space-y-4">
+                {(data.aboutTheFilm?.features?.items || [
+                  "56-minute documentary with institutional licensing or classroom streaming",
+                  "Live or virtual speaking engagements with AFE survivor and medical experts",
+                  "Discussion guides mapped to educational standards and competencies",
+                  "CME accreditation support and continuing education credits",
+                  "Assessment tools and reflection exercises for deeper learning"
+                ]).map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
           {/* How Our Educational Package Works */}
           <div className="mb-16">
-            <h3 className="text-3xl font-bold text-center mb-12 text-teal-800">How Our Educational Package Works</h3>
+            <h3 className="text-3xl font-bold text-center mb-12 text-teal-800">
+              {data.aboutTheFilm?.howItWorks?.title || "How Our Educational Package Works"}
+            </h3>
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="text-center border-2 border-teal-100 hover:border-teal-300 transition-colors">
-                <CardContent className="pt-8">
-                  <div className="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-4">1</div>
-                  <h4 className="text-xl font-semibold mb-3 text-teal-800">Watch & Learn</h4>
-                  <p className="text-gray-600">
-                    Screen the 56-minute documentary with your audience. Available for individual institutional licenses or classroom streaming passes.
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="text-center border-2 border-teal-100 hover:border-teal-300 transition-colors">
-                <CardContent className="pt-8">
-                  <div className="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-4">2</div>
-                  <h4 className="text-xl font-semibold mb-3 text-teal-800">Engage & Discuss</h4>
-                  <p className="text-gray-600">
-                    Add live speaking engagements with Annie (AFE survivor) and/or her medical team. Use our expertly crafted discussion guides and facilitation materials.
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="text-center border-2 border-teal-100 hover:border-teal-300 transition-colors">
-                <CardContent className="pt-8">
-                  <div className="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-4">3</div>
-                  <h4 className="text-xl font-semibold mb-3 text-teal-800">Transform Practice</h4>
-                  <p className="text-gray-600">
-                    Implement trauma-informed care principles in your practice with ongoing support materials and assessment tools.
-                  </p>
-                </CardContent>
-              </Card>
+              {(data.aboutTheFilm?.howItWorks?.steps || [
+                {
+                  step: 1,
+                  title: "Watch & Learn",
+                  description: "Screen the 56-minute documentary with your audience. Available for individual institutional licenses or classroom streaming passes."
+                },
+                {
+                  step: 2,
+                  title: "Engage & Discuss",
+                  description: "Add live speaking engagements with Annie (AFE survivor) and/or her medical team. Use our expertly crafted discussion guides and facilitation materials."
+                },
+                {
+                  step: 3,
+                  title: "Transform Practice",
+                  description: "Implement trauma-informed care principles in your practice with ongoing support materials and assessment tools."
+                }
+              ]).map((step, index) => (
+                <Card key={index} className="text-center border-2 border-teal-100 hover:border-teal-300 transition-colors">
+                  <CardContent className="pt-8">
+                    <div className="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-4">
+                      {step.step}
+                    </div>
+                    <h4 className="text-xl font-semibold mb-3 text-teal-800">{step.title}</h4>
+                    <p className="text-gray-600">{step.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
 
@@ -136,27 +140,39 @@ export default function Home() {
           <div className="bg-cream-100 p-8 rounded-lg">
             <h3 className="text-2xl font-bold text-center mb-8 text-teal-800">Choose Your Package</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h4 className="text-lg font-semibold text-teal-800 mb-3">Film + Materials Package</h4>
-                <p className="text-gray-600 mb-4">Perfect for self-facilitated screenings and classroom use</p>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Documentary streaming or institutional license</li>
-                  <li>• Discussion guides and educational handouts</li>
-                  <li>• Assessment tools and reflection worksheets</li>
-                  <li>• Post-screening survey templates</li>
-                </ul>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h4 className="text-lg font-semibold text-teal-800 mb-3">Full Experience Package</h4>
-                <p className="text-gray-600 mb-4">Complete solution with live speaking engagement</p>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Everything in Film + Materials Package</li>
-                  <li>• Live virtual or in-person speaking engagement</li>
-                  <li>• Q&A session with Annie and/or medical team</li>
-                  <li>• CME credit coordination</li>
-                  <li>• Custom content for your organization</li>
-                </ul>
-              </div>
+              {(data.aboutTheFilm?.packages || [
+                {
+                  title: "Film + Materials Package",
+                  description: "Perfect for self-facilitated screenings and classroom use",
+                  features: [
+                    "Documentary streaming or institutional license",
+                    "Discussion guides and educational handouts",
+                    "Assessment tools and reflection worksheets",
+                    "Post-screening survey templates"
+                  ]
+                },
+                {
+                  title: "Full Experience Package",
+                  description: "Complete solution with live speaking engagement",
+                  features: [
+                    "Everything in Film + Materials Package",
+                    "Live virtual or in-person speaking engagement",
+                    "Q&A session with Annie and/or medical team",
+                    "CME credit coordination",
+                    "Custom content for your organization"
+                  ]
+                }
+              ]).map((pkg, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+                  <h4 className="text-lg font-semibold text-teal-800 mb-3">{pkg.title}</h4>
+                  <p className="text-gray-600 mb-4">{pkg.description}</p>
+                  <ul className="text-sm text-gray-600 space-y-2">
+                    {pkg.features.map((feature, featureIndex) => (
+                      <li key={featureIndex}>• {feature}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -165,56 +181,53 @@ export default function Home() {
       {/* Testimonials Carousel */}
       <section className="py-16 bg-cream-100">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-display font-bold text-center mb-12">What People Are Saying</h2>
+          <h2 className="text-4xl font-display font-bold text-center mb-12">
+            {data.testimonials?.title || "What People Are Saying"}
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            
-            {/* Conference Testimonial */}
-            <Card>
-              <CardContent className="pt-6">
-                <div className="flex items-center mb-4">
-                  <Calendar className="h-6 w-6 text-teal-600 mr-2" />
-                  <Badge variant="secondary" className="bg-teal-100 text-teal-800">Conference</Badge>
-                </div>
-                <blockquote className="text-lg italic text-gray-700 mb-4">
-                  "Raw, powerful, and deeply moving. This film doesn't just tell a story—it invites you to feel every moment and leaves you thinking long after the credits roll."
-                </blockquote>
-                <footer className="text-sm font-medium text-gray-600">
-                  — Denise Amundson, RN Labor and Delivery
-                </footer>
-              </CardContent>
-            </Card>
-
-            {/* Hospital Testimonial */}
-            <Card>
-              <CardContent className="pt-6">
-                <div className="flex items-center mb-4">
-                  <Stethoscope className="h-6 w-6 text-teal-600 mr-2" />
-                  <Badge variant="secondary" className="bg-teal-100 text-teal-800">Hospital</Badge>
-                </div>
-                <blockquote className="text-lg italic text-gray-700 mb-4">
-                  "I'm a better nurse for having the opportunity to see their story. This film should be essential viewing for all healthcare professionals."
-                </blockquote>
-                <footer className="text-sm font-medium text-gray-600">
-                  — Julie O'Hara, RN, Neonatology
-                </footer>
-              </CardContent>
-            </Card>
-
-            {/* Education Testimonial */}
-            <Card>
-              <CardContent className="pt-6">
-                <div className="flex items-center mb-4">
-                  <GraduationCap className="h-6 w-6 text-teal-600 mr-2" />
-                  <Badge variant="secondary" className="bg-teal-100 text-teal-800">Education</Badge>
-                </div>
-                <blockquote className="text-lg italic text-gray-700 mb-4">
-                  "This film should be essential viewing for all healthcare professionals who are involved in obstetric care."
-                </blockquote>
-                <footer className="text-sm font-medium text-gray-600">
-                  — Catherine Hermann, MD
-                </footer>
-              </CardContent>
-            </Card>
+            {(data.testimonials?.items || [
+              {
+                quote: "Raw, powerful, and deeply moving. This film doesn't just tell a story—it invites you to feel every moment and leaves you thinking long after the credits roll.",
+                author: "Denise Amundson, RN Labor and Delivery",
+                badge: "Conference"
+              },
+              {
+                quote: "I'm a better nurse for having the opportunity to see their story. This film should be essential viewing for all healthcare professionals.",
+                author: "Julie O'Hara, RN, Neonatology",
+                badge: "Hospital"
+              },
+              {
+                quote: "This film should be essential viewing for all healthcare professionals who are involved in obstetric care.",
+                author: "Catherine Hermann, MD",
+                badge: "Education"
+              }
+            ]).map((testimonial, index) => {
+              const iconMap = {
+                Conference: Calendar,
+                Hospital: Stethoscope,
+                Education: GraduationCap
+              };
+              const Icon = iconMap[testimonial.badge] || Calendar;
+              
+              return (
+                <Card key={index}>
+                  <CardContent className="pt-6">
+                    <div className="flex items-center mb-4">
+                      <Icon className="h-6 w-6 text-teal-600 mr-2" />
+                      <Badge variant="secondary" className="bg-teal-100 text-teal-800">
+                        {testimonial.badge}
+                      </Badge>
+                    </div>
+                    <blockquote className="text-lg italic text-gray-700 mb-4">
+                      "{testimonial.quote}"
+                    </blockquote>
+                    <footer className="text-sm font-medium text-gray-600">
+                      — {testimonial.author}
+                    </footer>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -224,117 +237,89 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-display font-bold leading-tight mb-6">
-              Tailored Solutions for Healthcare Education Leaders
+              {data.audienceCards?.title || "Tailored Solutions for Healthcare Education Leaders"}
             </h2>
             <p className="text-xl lg:text-2xl opacity-90 max-w-4xl mx-auto">
-              Meet your specific educational goals with flexible packages designed for continuing education, staff competency, and curriculum enhancement
+              {data.audienceCards?.subtitle || "Meet your specific educational goals with flexible packages designed for continuing education, staff competency, and curriculum enhancement"}
             </p>
           </div>
 
           {/* Three Audience Cards */}
           <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            
-            {/* Conference Planners Card */}
-            <Card className="bg-white text-gray-800 shadow-2xl border-0 hover:shadow-3xl transition-shadow duration-300">
-              <CardContent className="p-8">
-                <div className="text-center mb-6">
-                  <div className="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Calendar className="h-8 w-8 text-teal-600" />
-                  </div>
-                  <h3 className="text-2xl font-display font-bold text-teal-800 mb-2">
-                    Medical Conference Planners
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-4">Meet continuing education requirements with compelling content</p>
-                </div>
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">ACCME-compliant content addressing current healthcare challenges</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Expert panels with real patient perspective boost engagement</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Complete logistics support: licensing, A/V, and promotional materials</span>
-                  </div>
-                </div>
-                <ConsultationModal defaultRole="conference">
-                  <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 text-lg font-semibold">
-                    Schedule a Consult
-                  </Button>
-                </ConsultationModal>
-              </CardContent>
-            </Card>
-
-            {/* Hospital Nurse Educators Card */}
-            <Card className="bg-white text-gray-800 shadow-2xl border-0 hover:shadow-3xl transition-shadow duration-300">
-              <CardContent className="p-8">
-                <div className="text-center mb-6">
-                  <div className="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Stethoscope className="h-8 w-8 text-teal-600" />
-                  </div>
-                  <h3 className="text-2xl font-display font-bold text-teal-800 mb-2">
-                    Hospital Nurse Educators
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-4">Improve patient outcomes through staff competency training</p>
-                </div>
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Evidence-based training aligned to AACN & AWHONN competencies</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Reduces medical errors through trauma-informed care principles</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Flexible delivery: grand rounds, unit training, or self-paced modules</span>
-                  </div>
-                </div>
-                <ConsultationModal defaultRole="hospital">
-                  <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 text-lg font-semibold">
-                    Schedule a Consult
-                  </Button>
-                </ConsultationModal>
-              </CardContent>
-            </Card>
-
-            {/* Medical School Professors Card */}
-            <Card className="bg-white text-gray-800 shadow-2xl border-0 hover:shadow-3xl transition-shadow duration-300">
-              <CardContent className="p-8">
-                <div className="text-center mb-6">
-                  <div className="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <GraduationCap className="h-8 w-8 text-teal-600" />
-                  </div>
-                  <h3 className="text-2xl font-display font-bold text-teal-800 mb-2">
-                    Medical School Professors
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-4">Enhance curriculum with real-world case studies</p>
-                </div>
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Case studies mapped to AAMC competencies and learning objectives</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Cross-curricular applications: OB-GYN, psychiatry, ethics, health systems</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">LMS-ready assessments and authentic patient perspectives</span>
-                  </div>
-                </div>
-                <ConsultationModal defaultRole="education">
-                  <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 text-lg font-semibold">
-                    Schedule a Consult
-                  </Button>
-                </ConsultationModal>
-              </CardContent>
-            </Card>
+            {(data.audienceCards?.cards || [
+              {
+                title: "Medical Conference Planners",
+                subtitle: "Meet continuing education requirements with compelling content",
+                icon: "Calendar",
+                benefits: [
+                  "ACCME-compliant content addressing current healthcare challenges",
+                  "Expert panels with real patient perspective boost engagement",
+                  "Complete logistics support: licensing, A/V, and promotional materials"
+                ]
+              },
+              {
+                title: "Hospital Nurse Educators",
+                subtitle: "Improve patient outcomes through staff competency training",
+                icon: "Stethoscope",
+                benefits: [
+                  "Evidence-based training aligned to AACN & AWHONN competencies",
+                  "Reduces medical errors through trauma-informed care principles",
+                  "Flexible delivery: grand rounds, unit training, or self-paced modules"
+                ]
+              },
+              {
+                title: "Medical School Professors",
+                subtitle: "Enhance curriculum with real-world case studies",
+                icon: "GraduationCap",
+                benefits: [
+                  "Case studies mapped to AAMC competencies and learning objectives",
+                  "Cross-curricular applications: OB-GYN, psychiatry, ethics, health systems",
+                  "LMS-ready assessments and authentic patient perspectives"
+                ]
+              }
+            ]).map((card, index) => {
+              const iconMap = {
+                Calendar: Calendar,
+                Stethoscope: Stethoscope,
+                GraduationCap: GraduationCap
+              };
+              const Icon = iconMap[card.icon] || Calendar;
+              const roleMap = {
+                "Medical Conference Planners": "conference",
+                "Hospital Nurse Educators": "hospital",
+                "Medical School Professors": "education"
+              };
+              const defaultRole = roleMap[card.title] || "conference";
+              
+              return (
+                <Card key={index} className="bg-white text-gray-800 shadow-2xl border-0 hover:shadow-3xl transition-shadow duration-300">
+                  <CardContent className="p-8">
+                    <div className="text-center mb-6">
+                      <div className="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Icon className="h-8 w-8 text-teal-600" />
+                      </div>
+                      <h3 className="text-2xl font-display font-bold text-teal-800 mb-2">
+                        {card.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-4">{card.subtitle}</p>
+                    </div>
+                    <div className="space-y-4 mb-8">
+                      {card.benefits.map((benefit, benefitIndex) => (
+                        <div key={benefitIndex} className="flex items-start space-x-3">
+                          <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-sm">{benefit}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <ConsultationModal defaultRole={defaultRole}>
+                      <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 text-lg font-semibold">
+                        Schedule a Consult
+                      </Button>
+                    </ConsultationModal>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -343,20 +328,34 @@ export default function Home() {
       <section className="py-12 bg-white border-b border-gray-200">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12 text-center">
-            <div className="flex items-center space-x-2">
-              <Users className="h-8 w-8 text-teal-600" />
-              <div>
-                <div className="text-3xl font-bold text-teal-800">6,500+</div>
-                <div className="text-sm text-gray-600">clinicians trained</div>
-              </div>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Star className="h-8 w-8 text-teal-600" />
-              <div>
-                <div className="text-3xl font-bold text-teal-800">97%</div>
-                <div className="text-sm text-gray-600">said session will change practice</div>
-              </div>
-            </div>
+            {(data.metrics?.stats || [
+              {
+                number: "6,500+",
+                label: "clinicians trained",
+                icon: "Users"
+              },
+              {
+                number: "97%",
+                label: "said session will change practice",
+                icon: "Star"
+              }
+            ]).map((stat, index) => {
+              const iconMap = {
+                Users: Users,
+                Star: Star
+              };
+              const Icon = iconMap[stat.icon] || Users;
+              
+              return (
+                <div key={index} className="flex items-center space-x-2">
+                  <Icon className="h-8 w-8 text-teal-600" />
+                  <div>
+                    <div className="text-3xl font-bold text-teal-800">{stat.number}</div>
+                    <div className="text-sm text-gray-600">{stat.label}</div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

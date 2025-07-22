@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/demo/blog/hello-world":{}},"dynamicRoutes":{"/demo/blog/[filename]":{"fallback":false}},"notFoundRoutes":[],"preview":{"previewModeId":"d03753b4c0a991c8b1cf4438adfd184a","previewModeSigningKey":"127b80da2f7b3ef4bc7b1d60744dac9a8c888f6c18d8d5a5fe5ac1dec0d12f94","previewModeEncryptionKey":"0d9dce17d9b916628e5d1d69a2930e14a734d4f891286ca5fd87ca7ad02c4516"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "942c30c3fb72b21a5aa6300a39fa06a6",
+    "previewModeSigningKey": "13b12483cda49cad3cca0a392e20289c73b1f343d80ed6a74ee21ecbce108df8",
+    "previewModeEncryptionKey": "bc1109578d98b712852f147e2e025ea12b2a35d12805d021b3ccfde3340c4ad5"
+  }
+}
