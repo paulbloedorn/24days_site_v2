@@ -1,4 +1,7 @@
-import { Link, useLocation } from "wouter";
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown, Users, Building2, GraduationCap, Hospital } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,7 +13,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export default function Header() {
-  const [location] = useLocation();
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);

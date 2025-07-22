@@ -1,5 +1,6 @@
+"use client";
+
 import { useState } from "react";
-import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Users } from "lucide-react";
 

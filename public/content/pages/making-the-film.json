@@ -1,0 +1,87 @@
+{
+  "title": "Making the Film",
+  "subtitle": "Behind the scenes of 24 Days Without You",
+  "hero": {
+    "title": "Making the Film",
+    "description": "Discover the journey behind \"24 Days Without You\" - from conception to acclaim. Meet the dedicated team who brought this powerful story to life and learn about the filmmaking process that created this award-winning documentary."
+  },
+  "producers": [
+    {
+      "name": "Rebecca Rizzio",
+      "role": "Producer & Director",
+      "bio": "Rebecca Rizzio is an award-winning documentary filmmaker with over 15 years of experience in healthcare storytelling. Her passion for maternal health advocacy drives her commitment to creating impactful documentaries that change perspectives and save lives.",
+      "image": "/assets/rebecca-rizzio.jpg"
+    },
+    {
+      "name": "Annie Sterle",
+      "role": "Executive Producer & Subject",
+      "bio": "Annie Sterle is an AFE survivor, maternal health advocate, and the heart of \"24 Days Without You.\" Her courage in sharing her story has educated thousands of healthcare professionals and improved maternal care practices nationwide.",
+      "image": "/assets/annie-sterle.jpg"
+    },
+    {
+      "name": "Carly Lassegard",
+      "role": "Co-Producer",
+      "bio": "Carly Lassegard brings expertise in educational content development and healthcare communications. Her work ensures that the film's message reaches and resonates with medical professionals across various specialties.",
+      "image": "/assets/carly-lassegard.jpg"
+    }
+  ],
+  "journey": {
+    "title": "The Film's Journey",
+    "timeline": [
+      {
+        "year": "2020",
+        "event": "Annie's AFE Experience",
+        "description": "The story begins with Annie's traumatic birth experience that would inspire the documentary."
+      },
+      {
+        "year": "2021",
+        "event": "Conception of the Film",
+        "description": "Rebecca and Annie collaborate to transform a personal tragedy into an educational tool."
+      },
+      {
+        "year": "2022",
+        "event": "Production Begins",
+        "description": "Filming commenced with interviews, medical expert consultations, and behind-the-scenes documentation."
+      },
+      {
+        "year": "2023",
+        "event": "Post-Production",
+        "description": "Editing, sound design, and educational material development bring the story to life."
+      },
+      {
+        "year": "2024",
+        "event": "Festival Circuit",
+        "description": "The film premieres at medical conferences and receives critical acclaim from healthcare professionals."
+      },
+      {
+        "year": "2025",
+        "event": "Educational Impact",
+        "description": "Widespread adoption in medical schools, hospitals, and conferences transforms maternal care education."
+      }
+    ]
+  },
+  "behindTheScenes": {
+    "title": "Behind the Scenes",
+    "description": "Take a look at the dedicated team and process that brought this powerful story to the screen.",
+    "images": [
+      "/assets/behind-scenes-1.jpg",
+      "/assets/behind-scenes-2.jpg",
+      "/assets/behind-scenes-3.jpg",
+      "/assets/behind-scenes-4.jpg"
+    ]
+  },
+  "quotes": [
+    {
+      "text": "This film represents more than just Annie's story—it's a call to action for every healthcare provider to practice with empathy and awareness.",
+      "author": "Rebecca Rizzio, Director"
+    },
+    {
+      "text": "If sharing my story can prevent even one family from experiencing what we went through, then every vulnerable moment was worth it.",
+      "author": "Annie Sterle, Executive Producer"
+    },
+    {
+      "text": "The educational impact of this film has exceeded our wildest expectations. It's changing how medical professionals view patient care.",
+      "author": "Dr. Sarah Johnson, Medical Consultant"
+    }
+  ]
+}
