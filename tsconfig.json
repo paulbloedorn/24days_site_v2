@@ -26,6 +26,6 @@
       "@assets/*": ["./attached_assets/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "server/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "client/src/App.tsx", "client/src/main.tsx", "client/src/pages/**/*", "server/**/*"]
 }

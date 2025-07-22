@@ -26,8 +26,14 @@ export class MemStorage implements IStorage {
   async createScreeningRequest(insertRequest: InsertScreeningRequest): Promise<ScreeningRequest> {
     const id = this.currentId++;
     const request: ScreeningRequest = {
-      ...insertRequest,
       id,
+      name: insertRequest.name,
+      email: insertRequest.email,
+      organization: insertRequest.organization,
+      screeningType: insertRequest.screeningType,
+      eventDate: insertRequest.eventDate ?? null,
+      attendeeCount: insertRequest.attendeeCount ?? null,
+      message: insertRequest.message ?? null,
       createdAt: new Date(),
     };
     this.screeningRequests.set(id, request);

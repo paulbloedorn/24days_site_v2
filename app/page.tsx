@@ -7,6 +7,7 @@ import TrailerModal from "@/components/trailer-modal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 import posterImage from "@assets/poster_24_days_1752421477308.png";
 import { client } from "../tina/__generated__/client";
 
@@ -25,10 +26,10 @@ export default async function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <h1 className="text-4xl lg:text-5xl font-display font-bold leading-tight text-gray-800">
-                {data.hero?.title || "We all take childbirth for granted..."}
+                {data?.hero?.title ?? "We all take childbirth for granted..."}
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                {data.hero?.description || "On March 22, 2020, Annie and Tony checked into the hospital for what should have been a routine delivery of their baby boy. What followed was 24 days that would change their lives forever."}
+                {data?.hero?.description ?? "On March 22, 2020, Annie and Tony checked into the hospital for what should have been a routine delivery of their baby boy. What followed was 24 days that would change their lives forever."}
               </p>
               <div className="pt-4">
                 <TrailerModal>
@@ -41,10 +42,13 @@ export default async function Home() {
             </div>
             <div className="relative">
               <div className="max-w-lg mx-auto">
-                <img 
+                <Image 
                   src={posterImage} 
                   alt="24 Days Without You movie poster featuring Annie and her baby" 
                   className="w-full h-auto rounded-lg shadow-2xl"
+                  width={500}
+                  height={750}
+                  priority
                 />
               </div>
             </div>
@@ -57,34 +61,34 @@ export default async function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-gray-800 mb-4">
-              {data.aboutTheFilm?.title || "About the Film"}
+              {data?.aboutTheFilm?.title ?? "About the Film"}
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              {data.aboutTheFilm?.description || "Address urgent healthcare priorities with an authentic patient story that improves clinical competency, reduces medical errors, and enhances trauma-informed care across your organization."}
+              {data?.aboutTheFilm?.description ?? "Address urgent healthcare priorities with an authentic patient story that improves clinical competency, reduces medical errors, and enhances trauma-informed care across your organization."}
             </p>
           </div>
 
           {/* Main Content */}
           <div className="bg-cream-50 p-8 rounded-lg mb-12">
             <h3 className="text-2xl font-bold text-teal-800 mb-4">
-              {data.aboutTheFilm?.mainContent?.title || "Award-Winning Documentary with Complete Education Packages"}
+              {data?.aboutTheFilm?.mainContent?.title ?? "Award-Winning Documentary with Complete Education Packages"}
             </h3>
             <p className="text-gray-700 mb-4">
-              {data.aboutTheFilm?.mainContent?.description1 || "Meet continuing education requirements while addressing critical healthcare challenges. This powerful case study transforms abstract concepts into lived experiences, helping healthcare teams understand the real impact of their clinical decisions on patients and families."}
+              {data?.aboutTheFilm?.mainContent?.description1 ?? "Meet continuing education requirements while addressing critical healthcare challenges. This powerful case study transforms abstract concepts into lived experiences, helping healthcare teams understand the real impact of their clinical decisions on patients and families."}
             </p>
             <p className="text-gray-700">
-              {data.aboutTheFilm?.mainContent?.description2 || "Whether you need CME-accredited conference content, staff competency training, or real-world curriculum enhancement, our flexible educational packages provide the authentic patient perspective your audience needs to improve care quality and reduce medical errors."}
+              {data?.aboutTheFilm?.mainContent?.description2 ?? "Whether you need CME-accredited conference content, staff competency training, or real-world curriculum enhancement, our flexible educational packages provide the authentic patient perspective your audience needs to improve care quality and reduce medical errors."}
             </p>
           </div>
 
           {/* Features */}
           <div className="mb-16">
             <h3 className="text-2xl font-bold text-center mb-8 text-teal-800">
-              {data.aboutTheFilm?.features?.title || "Flexible Solutions for Every Educational Need"}
+              {data?.aboutTheFilm?.features?.title ?? "Flexible Solutions for Every Educational Need"}
             </h3>
             <div className="bg-white border border-gray-200 rounded-lg p-8">
               <ul className="space-y-4">
-                {(data.aboutTheFilm?.features?.items || [
+                {(data?.aboutTheFilm?.features?.items ?? [
                   "56-minute documentary with institutional licensing or classroom streaming",
                   "Live or virtual speaking engagements with AFE survivor and medical experts",
                   "Discussion guides mapped to educational standards and competencies",
@@ -103,10 +107,10 @@ export default async function Home() {
           {/* How Our Educational Package Works */}
           <div className="mb-16">
             <h3 className="text-3xl font-bold text-center mb-12 text-teal-800">
-              {data.aboutTheFilm?.howItWorks?.title || "How Our Educational Package Works"}
+              {data?.aboutTheFilm?.howItWorks?.title ?? "How Our Educational Package Works"}
             </h3>
             <div className="grid md:grid-cols-3 gap-8">
-              {(data.aboutTheFilm?.howItWorks?.steps || [
+              {(data?.aboutTheFilm?.howItWorks?.steps ?? [
                 {
                   step: 1,
                   title: "Watch & Learn",
@@ -126,10 +130,10 @@ export default async function Home() {
                 <Card key={index} className="text-center border-2 border-teal-100 hover:border-teal-300 transition-colors">
                   <CardContent className="pt-8">
                     <div className="bg-teal-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-4">
-                      {step.step}
+                      {step?.step ?? index + 1}
                     </div>
-                    <h4 className="text-xl font-semibold mb-3 text-teal-800">{step.title}</h4>
-                    <p className="text-gray-600">{step.description}</p>
+                    <h4 className="text-xl font-semibold mb-3 text-teal-800">{step?.title ?? ""}</h4>
+                    <p className="text-gray-600">{step?.description ?? ""}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -140,7 +144,7 @@ export default async function Home() {
           <div className="bg-cream-100 p-8 rounded-lg">
             <h3 className="text-2xl font-bold text-center mb-8 text-teal-800">Choose Your Package</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              {(data.aboutTheFilm?.packages || [
+              {(data?.aboutTheFilm?.packages ?? [
                 {
                   title: "Film + Materials Package",
                   description: "Perfect for self-facilitated screenings and classroom use",
@@ -164,10 +168,10 @@ export default async function Home() {
                 }
               ]).map((pkg, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                  <h4 className="text-lg font-semibold text-teal-800 mb-3">{pkg.title}</h4>
-                  <p className="text-gray-600 mb-4">{pkg.description}</p>
+                  <h4 className="text-lg font-semibold text-teal-800 mb-3">{pkg?.title ?? ""}</h4>
+                  <p className="text-gray-600 mb-4">{pkg?.description ?? ""}</p>
                   <ul className="text-sm text-gray-600 space-y-2">
-                    {pkg.features.map((feature, featureIndex) => (
+                    {(pkg?.features ?? []).map((feature, featureIndex) => (
                       <li key={featureIndex}>• {feature}</li>
                     ))}
                   </ul>
@@ -182,10 +186,10 @@ export default async function Home() {
       <section className="py-16 bg-cream-100">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-display font-bold text-center mb-12">
-            {data.testimonials?.title || "What People Are Saying"}
+            {data?.testimonials?.title ?? "What People Are Saying"}
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {(data.testimonials?.items || [
+            {(data?.testimonials?.items ?? [
               {
                 quote: "Raw, powerful, and deeply moving. This film doesn't just tell a story—it invites you to feel every moment and leaves you thinking long after the credits roll.",
                 author: "Denise Amundson, RN Labor and Delivery",
@@ -202,12 +206,12 @@ export default async function Home() {
                 badge: "Education"
               }
             ]).map((testimonial, index) => {
-              const iconMap = {
+              const iconMap: Record<string, typeof Calendar> = {
                 Conference: Calendar,
                 Hospital: Stethoscope,
                 Education: GraduationCap
               };
-              const Icon = iconMap[testimonial.badge] || Calendar;
+              const Icon = iconMap[testimonial?.badge ?? ""] ?? Calendar;
               
               return (
                 <Card key={index}>
@@ -215,14 +219,14 @@ export default async function Home() {
                     <div className="flex items-center mb-4">
                       <Icon className="h-6 w-6 text-teal-600 mr-2" />
                       <Badge variant="secondary" className="bg-teal-100 text-teal-800">
-                        {testimonial.badge}
+                        {testimonial?.badge ?? ""}
                       </Badge>
                     </div>
                     <blockquote className="text-lg italic text-gray-700 mb-4">
-                      "{testimonial.quote}"
+                      "{testimonial?.quote ?? ""}"
                     </blockquote>
                     <footer className="text-sm font-medium text-gray-600">
-                      — {testimonial.author}
+                      — {testimonial?.author ?? ""}
                     </footer>
                   </CardContent>
                 </Card>
@@ -237,16 +241,16 @@ export default async function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-display font-bold leading-tight mb-6">
-              {data.audienceCards?.title || "Tailored Solutions for Healthcare Education Leaders"}
+              {data?.audienceCards?.title ?? "Tailored Solutions for Healthcare Education Leaders"}
             </h2>
             <p className="text-xl lg:text-2xl opacity-90 max-w-4xl mx-auto">
-              {data.audienceCards?.subtitle || "Meet your specific educational goals with flexible packages designed for continuing education, staff competency, and curriculum enhancement"}
+              {data?.audienceCards?.subtitle ?? "Meet your specific educational goals with flexible packages designed for continuing education, staff competency, and curriculum enhancement"}
             </p>
           </div>
 
           {/* Three Audience Cards */}
           <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {(data.audienceCards?.cards || [
+            {(data?.audienceCards?.cards ?? [
               {
                 title: "Medical Conference Planners",
                 subtitle: "Meet continuing education requirements with compelling content",
@@ -278,18 +282,18 @@ export default async function Home() {
                 ]
               }
             ]).map((card, index) => {
-              const iconMap = {
+              const iconMap: Record<string, typeof Calendar> = {
                 Calendar: Calendar,
                 Stethoscope: Stethoscope,
                 GraduationCap: GraduationCap
               };
-              const Icon = iconMap[card.icon] || Calendar;
-              const roleMap = {
+              const Icon = iconMap[card?.icon ?? ""] ?? Calendar;
+              const roleMap: Record<string, string> = {
                 "Medical Conference Planners": "conference",
                 "Hospital Nurse Educators": "hospital",
                 "Medical School Professors": "education"
               };
-              const defaultRole = roleMap[card.title] || "conference";
+              const defaultRole = roleMap[card?.title ?? ""] ?? "conference";
               
               return (
                 <Card key={index} className="bg-white text-gray-800 shadow-2xl border-0 hover:shadow-3xl transition-shadow duration-300">
@@ -299,12 +303,12 @@ export default async function Home() {
                         <Icon className="h-8 w-8 text-teal-600" />
                       </div>
                       <h3 className="text-2xl font-display font-bold text-teal-800 mb-2">
-                        {card.title}
+                        {card?.title ?? ""}
                       </h3>
-                      <p className="text-sm text-gray-600 mb-4">{card.subtitle}</p>
+                      <p className="text-sm text-gray-600 mb-4">{card?.subtitle ?? ""}</p>
                     </div>
                     <div className="space-y-4 mb-8">
-                      {card.benefits.map((benefit, benefitIndex) => (
+                      {(card?.benefits ?? []).map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className="flex items-start space-x-3">
                           <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                           <span className="text-sm">{benefit}</span>
@@ -328,7 +332,7 @@ export default async function Home() {
       <section className="py-12 bg-white border-b border-gray-200">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12 text-center">
-            {(data.metrics?.stats || [
+            {(data?.metrics?.stats ?? [
               {
                 number: "6,500+",
                 label: "clinicians trained",
@@ -340,18 +344,18 @@ export default async function Home() {
                 icon: "Star"
               }
             ]).map((stat, index) => {
-              const iconMap = {
+              const iconMap: Record<string, typeof Users> = {
                 Users: Users,
                 Star: Star
               };
-              const Icon = iconMap[stat.icon] || Users;
+              const Icon = iconMap[stat?.icon ?? ""] ?? Users;
               
               return (
                 <div key={index} className="flex items-center space-x-2">
                   <Icon className="h-8 w-8 text-teal-600" />
                   <div>
-                    <div className="text-3xl font-bold text-teal-800">{stat.number}</div>
-                    <div className="text-sm text-gray-600">{stat.label}</div>
+                    <div className="text-3xl font-bold text-teal-800">{stat?.number ?? ""}</div>
+                    <div className="text-sm text-gray-600">{stat?.label ?? ""}</div>
                   </div>
                 </div>
               );

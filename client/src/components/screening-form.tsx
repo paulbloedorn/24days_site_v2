@@ -85,7 +85,7 @@ export default function ScreeningForm({ screeningType, title }: ScreeningFormPro
                   <FormItem>
                     <FormLabel>Full Name *</FormLabel>
                     <FormControl>
-                      <Input placeholder="Your full name" {...field} />
+                      <Input placeholder="Your full name" {...field} value={field.value ?? ""} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -99,7 +99,7 @@ export default function ScreeningForm({ screeningType, title }: ScreeningFormPro
                   <FormItem>
                     <FormLabel>Email Address *</FormLabel>
                     <FormControl>
-                      <Input type="email" placeholder="your.email@example.com" {...field} />
+                      <Input type="email" placeholder="your.email@example.com" {...field} value={field.value ?? ""} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -114,7 +114,7 @@ export default function ScreeningForm({ screeningType, title }: ScreeningFormPro
                 <FormItem>
                   <FormLabel>Organization *</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your organization name" {...field} />
+                    <Input placeholder="Your organization name" {...field} value={field.value ?? ""} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -129,7 +129,7 @@ export default function ScreeningForm({ screeningType, title }: ScreeningFormPro
                   <FormItem>
                     <FormLabel>Preferred Event Date</FormLabel>
                     <FormControl>
-                      <Input type="date" {...field} />
+                      <Input type="date" {...field} value={field.value ?? ""} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -143,7 +143,7 @@ export default function ScreeningForm({ screeningType, title }: ScreeningFormPro
                   <FormItem>
                     <FormLabel>Expected Attendees</FormLabel>
                     <FormControl>
-                      <Input placeholder="e.g., 50-100" {...field} />
+                      <Input placeholder="e.g., 50-100" {...field} value={field.value ?? ""} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -162,6 +162,7 @@ export default function ScreeningForm({ screeningType, title }: ScreeningFormPro
                       placeholder="Tell us more about your event, audience, and any specific requirements..."
                       className="min-h-[120px]"
                       {...field}
+                      value={field.value ?? ""}
                     />
                   </FormControl>
                   <FormMessage />
