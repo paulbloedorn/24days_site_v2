@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/demo/blog/hello-world":{}},"dynamicRoutes":{"/demo/blog/[filename]":{"fallback":false}},"notFoundRoutes":[],"preview":{"previewModeId":"3f9414590bd7c1ac13ab434479b6a504","previewModeSigningKey":"c2bc8c44dbadcb326ff38bb89101583bd09ff24476faa3059ef6f64c0641557a","previewModeEncryptionKey":"cd901b15ec52bc6be06dffb8a26a9ed8572e6c1d5e7e6fd4d7389b40121455e0"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "47c17ef0852f6e3d687c1589873c98d6",
+    "previewModeSigningKey": "3929d1992f8043a631ab61028c0cf9ab27430a9ffa1ab29088dcd00068fc6828",
+    "previewModeEncryptionKey": "914fa3d9c7c4d2a58bcae08a14f889565f690e3b2a9b72560ca6bc8e22454b43"
+  }
+}
