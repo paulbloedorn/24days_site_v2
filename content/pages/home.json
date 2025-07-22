@@ -1,11 +1,43 @@
 {
-  "_template": "home",
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "sections": [
+      {
+        "title": "Screening Logistics",
+        "questions": [
+          {
+            "question": "How far in advance should we book a screening?",
+            "answer": "We recommend booking at least 4-6 weeks in advance to ensure availability and allow time for proper promotion and logistics planning."
+          },
+          {
+            "question": "Is there a cost for screenings?",
+            "answer": "Screening costs vary based on audience size, venue type, and additional services requested. Contact us for a customized quote based on your specific needs."
+          }
+        ]
+      },
+      {
+        "title": "Educational Impact",
+        "questions": [
+          {
+            "question": "What learning outcomes can we expect?",
+            "answer": "Audiences gain increased awareness of AFE, improved understanding of maternal complications, enhanced empathy for patient experiences, and actionable insights for healthcare improvement."
+          },
+          {
+            "question": "Are CME credits available?",
+            "answer": "Yes, we can arrange for Continuing Medical Education (CME) credits for qualified healthcare professional screenings. Contact us to discuss accreditation options."
+          },
+          {
+            "question": "What support materials are provided?",
+            "answer": "We provide discussion guides, educational handouts, speaker notes, and post-screening survey templates to maximize the educational impact of your event."
+          }
+        ]
+      }
+    ]
+  },
   "hero": {
-    "title": "We all take childbirth for granted...",
+    "title": "We all take childbirth for WORKING!!  granted...",
     "description": "On March 22, 2020, Annie and Tony checked into the hospital for what should have been a routine delivery of their baby boy. What followed was 24 days that would change their lives forever.",
-    "buttonText": "Watch Trailer",
-    "posterImage": "/attached_assets/poster_24_days_1752421477308.png",
-    "posterAlt": "24 Days Without You movie poster featuring Annie and her baby"
+    "buttonText": "Watch Trailer"
   },
   "aboutTheFilm": {
     "title": "About the Film",
@@ -137,41 +169,6 @@
         "number": "97%",
         "label": "said session will change practice",
         "icon": "Star"
-      }
-    ]
-  },
-  "faq": {
-    "title": "Frequently Asked Questions",
-    "sections": [
-      {
-        "title": "Screening Logistics",
-        "questions": [
-          {
-            "question": "How far in advance should we book a screening?",
-            "answer": "We recommend booking at least 4-6 weeks in advance to ensure availability and allow time for proper promotion and logistics planning."
-          },
-          {
-            "question": "Is there a cost for screenings?",
-            "answer": "Screening costs vary based on audience size, venue type, and additional services requested. Contact us for a customized quote based on your specific needs."
-          }
-        ]
-      },
-      {
-        "title": "Educational Impact",
-        "questions": [
-          {
-            "question": "What learning outcomes can we expect?",
-            "answer": "Audiences gain increased awareness of AFE, improved understanding of maternal complications, enhanced empathy for patient experiences, and actionable insights for healthcare improvement."
-          },
-          {
-            "question": "Are CME credits available?",
-            "answer": "Yes, we can arrange for Continuing Medical Education (CME) credits for qualified healthcare professional screenings. Contact us to discuss accreditation options."
-          },
-          {
-            "question": "What support materials are provided?",
-            "answer": "We provide discussion guides, educational handouts, speaker notes, and post-screening survey templates to maximize the educational impact of your event."
-          }
-        ]
       }
     ]
   }
