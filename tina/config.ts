@@ -1,31 +1,28 @@
-import { defineConfig } from "tinacms";
+import { defineStaticConfig } from "tinacms";
 
-// Your hosting provider likely exposes this as an environment variable
 const branch =
   process.env.GITHUB_BRANCH ||
   process.env.VERCEL_GIT_COMMIT_REF ||
   process.env.HEAD ||
   "main";
 
-export default defineConfig({
+export default defineStaticConfig({
   branch,
-
-  // Get this from tina.io
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  // Get this from tina.io
   token: process.env.TINA_TOKEN,
 
   build: {
     outputFolder: "admin",
     publicFolder: "public",
   },
+
   media: {
     tina: {
       mediaRoot: "",
       publicFolder: "public",
     },
   },
-  // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
+
   schema: {
     collections: [
       {
@@ -34,6 +31,52 @@ export default defineConfig({
         path: "content/pages",
         format: "json",
         fields: [
+          {
+            type: "object",
+            name: "faq",
+            label: "FAQ",
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Section Title",
+              },
+              {
+                type: "object",
+                name: "sections",
+                label: "FAQ Sections",
+                list: true,
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Section Title",
+                  },
+                  {
+                    type: "object",
+                    name: "questions",
+                    label: "Questions",
+                    list: true,
+                    fields: [
+                      {
+                        type: "string",
+                        name: "question",
+                        label: "Question",
+                      },
+                      {
+                        type: "string",
+                        name: "answer",
+                        label: "Answer",
+                        ui: {
+                          component: "textarea",
+                        },
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
           {
             type: "object",
             name: "hero",
@@ -330,7 +373,6 @@ export default defineConfig({
             isBody: true,
           },
         ],
-        
       },
     ],
   },

@@ -1,13 +1,8 @@
 // pages/_app.tsx
-import { TinaProvider, TinaCMS } from "tinacms"
 import type { AppProps } from "next/app"
 
-const cms = new TinaCMS({});
-
-export default function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <TinaProvider cms={cms}>
-      <Component {...pageProps} />
-    </TinaProvider>
-  )
+function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />
 }
+
+export default App

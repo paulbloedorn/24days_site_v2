@@ -1,0 +1,139 @@
+.
+├── app
+│   ├── api
+│   │   └── screening-requests
+│   │       ├── [id]
+│   │       └── route.ts
+│   ├── app
+│   │   ├── api
+│   │   │   └── screening-requests
+│   │   └── lib
+│   ├── components
+│   ├── conference
+│   │   └── page.tsx
+│   ├── corporate
+│   │   └── page.tsx
+│   ├── education
+│   │   └── page.tsx
+│   ├── globals.css
+│   ├── hooks
+│   ├── hospital
+│   │   └── page.tsx
+│   ├── layout.tsx
+│   ├── lib
+│   │   ├── queryClient.ts
+│   │   ├── storage.ts
+│   │   ├── tina.ts
+│   │   └── utils.ts
+│   ├── making-the-film
+│   │   └── page.tsx
+│   ├── not-found.tsx
+│   ├── page.tsx
+│   └── providers.tsx
+├── attached_assets
+│   ├── content-1753119313300.md
+│   ├── content-1753119338282.md
+│   ├── content-1753119518969.md
+│   ├── content-1753119523567.md
+│   ├── exported-assets_1752414377975.zip
+│   ├── Homepage Blueprint for “24 Days Without You”_1752414333517.pdf
+│   ├── Pasted-if-i-already-have-a-webpage-built-in-react-what-files-would-I-need-to-give-you-to-help-me-create-a--1753116592286_1753116592286.txt
+│   ├── poster_24_days_1752421232098.png
+│   ├── poster_24_days_1752421477308.png
+│   ├── screenshot-1751401521623.png
+│   ├── screenshot-1753119386348.png
+│   ├── screenshot-1753119521760.png
+│   ├── targeted_element_1752440693471.png
+│   └── Website Revisions_1751401844002.docx
+├── cleanup-analysis.md
+├── client
+│   ├── index.html
+│   └── src
+│       ├── App.tsx
+│       ├── components
+│       │   ├── consultation-modal.tsx
+│       │   ├── faq.tsx
+│       │   ├── footer.tsx
+│       │   ├── header.tsx
+│       │   ├── screening-form.tsx
+│       │   ├── TinaProvider.tsx
+│       │   ├── trailer-modal.tsx
+│       │   └── ui
+│       ├── hooks
+│       │   ├── use-mobile.tsx
+│       │   ├── use-toast.ts
+│       │   └── usePageContent.ts
+│       ├── index.css
+│       ├── lib
+│       │   ├── queryClient.ts
+│       │   ├── tina.ts
+│       │   └── utils.ts
+│       ├── main.tsx
+│       └── pages
+│           ├── conference.tsx
+│           ├── corporate.tsx
+│           ├── education.tsx
+│           ├── home-tina.tsx
+│           ├── home.tsx
+│           ├── hospital.tsx
+│           ├── making-the-film.tsx
+│           └── not-found.tsx
+├── components.json
+├── content
+│   ├── pages
+│   │   ├── conference.json
+│   │   ├── conference.md
+│   │   ├── corporate.json
+│   │   ├── corporate.md
+│   │   ├── education.json
+│   │   ├── education.md
+│   │   ├── home.json
+│   │   ├── home.md
+│   │   ├── hospital.json
+│   │   ├── hospital.md
+│   │   ├── making-the-film.json
+│   │   └── making-the-film.md
+│   └── posts
+│       └── hello-world.md
+├── dev-output.log
+├── dist
+│   └── index.js
+├── drizzle.config.ts
+├── next-env.d.ts
+├── next.config.js
+├── package-lock.json
+├── package.json
+├── pages
+│   ├── _app.tsx
+│   └── index.tsx
+├── pnpm-lock.yaml
+├── postcss.config.js
+├── replit.md
+├── server
+│   ├── index.ts
+│   ├── routes.ts
+│   ├── storage.ts
+│   └── vite.ts
+├── shared
+│   └── schema.ts
+├── start-dev.js
+├── structure.txt
+├── tailwind.config.ts
+├── tina
+│   ├── __generated__
+│   │   ├── _graphql.json
+│   │   ├── _lookup.json
+│   │   ├── _schema.json
+│   │   ├── client.ts
+│   │   ├── config.prebuild.jsx
+│   │   ├── frags.gql
+│   │   ├── queries.gql
+│   │   ├── schema.gql
+│   │   ├── static-media.json
+│   │   └── types.ts
+│   ├── config.ts
+│   └── tina-lock.json
+├── TINACMS_SETUP.md
+└── tsconfig.json
+
+34 directories, 103 files
