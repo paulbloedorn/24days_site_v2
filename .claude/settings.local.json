@@ -21,7 +21,11 @@
       "Bash(npm:*)",
       "Bash(npx next:*)",
       "Bash(mv:*)",
-      "Bash(npx tinacms build:*)"
+      "Bash(npx tinacms build:*)",
+      "WebFetch(domain:24days.replit.app)",
+      "WebFetch(domain:tina.io)",
+      "Bash(timeout 10s npm run dev)",
+      "Bash(gtimeout:*)"
     ],
     "deny": []
   }

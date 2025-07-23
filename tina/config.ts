@@ -1,4 +1,4 @@
-import { defineStaticConfig } from "tinacms";
+import { defineStaticConfig } from 'tinacms';
 
 const branch =
   process.env.GITHUB_BRANCH ||
@@ -23,6 +23,18 @@ export default defineStaticConfig({
     },
   },
 
+  admin: {
+    auth: {
+      onLogin: async ({ token }) => {
+        location.href = 
+          `/admin/index.html#/collections/pages/~/${encodeURIComponent('home.json')}`
+      },
+      onLogout: async () => {
+        location.href = `/admin/index.html`
+      },
+    },
+  },
+
   schema: {
     collections: [
       {
@@ -30,6 +42,14 @@ export default defineStaticConfig({
         label: "Pages",
         path: "content/pages",
         format: "json",
+        ui: {
+          router: ({ document }) => {
+            if (document._sys.filename === 'home') {
+              return '/'
+            }
+            return `/${document._sys.filename}`
+          }
+        },
         fields: [
           {
             type: "object",
